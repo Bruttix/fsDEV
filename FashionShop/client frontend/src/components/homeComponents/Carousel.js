@@ -99,6 +99,7 @@ const Carousel = (props) => {
             };
         };
     }
+    // DOMContentLoaded handler if/else
     if (document.readyState === "complete") {
         // already fired, so run logic right away
         runWhenPageIsFullyParsed();
