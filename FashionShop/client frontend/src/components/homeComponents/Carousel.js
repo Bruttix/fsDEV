@@ -110,10 +110,7 @@ const Carousel = (props) => {
         return (
             <div className="rowCarousel">
                 <script src="Carousel.js"></script>
-                <div className="headerCarousel">
-                    <h3 className="title">Featured</h3>
-                    <div className="progress-bar"></div>
-                </div>
+                
                 <div className="containerCarousel">
                     <button className="handleBar left-handle">
                         <div className="textHandleBar">&#8249;</div>
@@ -125,16 +122,15 @@ const Carousel = (props) => {
                         <img src="https://via.placeholder.com/240/00DDD0?text=4" alt="placehold" />
                         <img src="https://via.placeholder.com/250/00DDD0?text=5" alt="placehold" />
                         <img src="https://via.placeholder.com/260/00DDD0?text=6" alt="placehold" />
-                        <img src="https://via.placeholder.com/270/00DDD0?text=7" alt="placehold" />
-                        <img src="https://via.placeholder.com/280/00DDD0?text=8" alt="placehold" />
-                        <img src="https://via.placeholder.com/250/00DDD0?text=9" alt="placehold" />
-                        <img src="https://via.placeholder.com/260/00DDD0?text=10" alt="placehold" />
-                        <img src="https://via.placeholder.com/270/00DDD0?text=11" alt="placehold" />
-                        <img src="https://via.placeholder.com/280/00DDD0?text=12" alt="placehold" />
                     </div>
                     <button className="handleBar right-handle">
                         <div className="textHandleBar">&#8250;</div>
                     </button>
+
+                </div>
+                <div className="headerCarousel">
+                    <h3 className="title">Featured</h3>
+                    <div className="progress-bar"></div>
                 </div>
             </div>
         )

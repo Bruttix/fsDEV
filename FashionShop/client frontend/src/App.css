@@ -9,13 +9,16 @@
 body {
     margin: 0;
 }
+.rowCarousel{
+    padding-top: 0.80%;
+}
 .containerCarousel {
     display: flex;
     justify-content: center;
     overflow: hidden;
 }
 .slider {
-    --items-per-screen: 4;
+    --items-per-screen: 2;
     --slider-index: 0;
     display: flex;
     flex-grow: 1;
@@ -26,7 +29,7 @@ body {
     .slider > img {
         flex: 0 0 calc(100% / var(--items-per-screen));
         max-width: calc(100% / var(--items-per-screen));
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 22 / 9;
         padding: var(--img-gap);
         border-radius: 1rem;
     }
@@ -86,7 +89,7 @@ body {
 
 .progress-item {
     flex: 0 0 1.5rem;
-    min-width: 1.5rem;
+    min-width: 2.5rem;
     height: .5rem;
     background-color: rgba(255, 255, 255, .5);
 }
@@ -262,6 +265,7 @@ textarea:focus {
     -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
     box-shadow: 0 3px 5px var(--clr-neon);
     margin-top: 7.5em;
+    background-size: cover;
 }
 .Announcement .col-md-6 p {
   color: var(--clr-bg);
