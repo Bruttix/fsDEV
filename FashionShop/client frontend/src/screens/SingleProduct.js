@@ -134,7 +134,7 @@ const SingleProduct = ({ history, match }) => {
                 {product.reviews.map((review) => (
                   <div 
                     key={review._id}
-                    className="bg-dark mb-5 mb-md-3 p-3 shadow-sm rounded"
+                    className="mb-5 mb-md-3 p-3 shadow-sm rounded"
                   >
                     <strong>{review.name}</strong>
                     <Rating value={review.rating} />
@@ -162,8 +162,7 @@ const SingleProduct = ({ history, match }) => {
                       <select
                         value={rating}
                         onChange={(e) => setRating(e.target.value)}
-                        className="col-12 p-3 mt-2 bg-dark border-0 rounded"
-                      >
+                        className="col-12 p-3 mt-2 border-0 rounded">
                         <option value="">Select...</option>
                         <option value="1">1 - Poor</option>
                         <option value="2">2 - Fair</option>
@@ -178,14 +177,13 @@ const SingleProduct = ({ history, match }) => {
                         row="3"
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
-                        className="col-12 bg-dark p-3 mt-2 border-0 rounded"
+                        className="col-12 p-3 mt-2 border-0 rounded"
                       ></textarea>
                     </div>
                     <div className="my-3">
                       <button
                         disabled={loadingCreateReview}
-                        className="col-12 bg-black border-0 p-3 rounded text-white"
-                      >
+                        className="neon-button2">
                         SUBMIT
                       </button>
                     </div>

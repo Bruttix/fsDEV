@@ -1042,6 +1042,21 @@ a.headerSocial:hover::after {
 .round-black-btn:focus {
   background: var(--clr-neon);
 }
+.single-product .col-md-6 textarea{
+    background-color: #77fcfe;
+    color: var(--clr-neon);
+    font-size: 25px;
+}.single-product select{
+    color: var(--clr-neon);
+    background-color: #77fcfe;
+    font-size: 25px;
+}.single-product .col-md-6 mb-3{
+    color: #77fcfe
+ }
+.single-product .mb-5 {
+    background-color: #77fcfe;
+    font-size: 25px;
+}
 
 /* LOGIN */
 .login-center {
