@@ -1,17 +1,23 @@
 import React from "react";
 
 const CalltoActionSection = () => {
-  return (
+
+    return (
     <div className="subscribe-section bg-with-black">
       <div className="container">
         <div className="row">
           <div className="col-xs-12">
             <div className="subscribe-head">
-              <h2>DO you need more tips?</h2>
-              <p>Sign up free and get the latest tips.</p>
-              <form className="form-section">
-                <input placeholder="Your Email..." name="email" type="email" />
-                <input value="Yes. I want!" name="subscribe" type="submit" />
+              <h2>Interested in custom work or more?</h2>
+              <p>Sign up for free and stay in touch</p>
+              <form className="form-section" action="https://formspree.io/f/xzbojaod" method="POST">
+                <input type="name" placeholder="Name" name="name" required />
+                <br />
+                <input type="email" placeholder="example@email.com" name="email" required />
+                <br/>
+                <textarea type="inquiry" name="inquiry" rows="4" cols="50" placeholder="Have an inquiry? Enter it here!"></textarea>
+                <br/>
+                <button className="neon-button2" type="submit"> Sign Up</button>
               </form>
             </div>
           </div>
