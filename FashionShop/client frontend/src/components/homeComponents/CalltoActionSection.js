@@ -15,7 +15,10 @@ const CalltoActionSection = () => {
                 <br />
                 <input type="email" placeholder="example@email.com" name="email" required />
                 <br/>
-                <textarea type="inquiry" name="inquiry" rows="4" cols="50" placeholder="Have an inquiry? Enter it here!"></textarea>
+                <textarea type="inquiry" name="inquiry" rows="3" cols="50" placeholder="
+
+                Have an inquiry? Enter it here!">
+                </textarea>
                 <br/>
                 <button className="neon-button2" type="submit"> Sign Up</button>
               </form>

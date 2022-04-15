@@ -884,6 +884,7 @@ a.headerSocial:hover::after {
   width: 650px;
   margin-bottom: 9px;
   background-color:  #77fcfe;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
 }.form-section input[type="name"] {
   border: 0 none;
   border-radius: 25px;
@@ -897,6 +898,7 @@ a.headerSocial:hover::after {
   margin-bottom: 6px;
   margin-top: 20px;
   background-color:  #77fcfe;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
 }.form-section textarea[type="inquiry"] {
   border: 0 none;
   border-radius: 25px;
@@ -909,6 +911,7 @@ a.headerSocial:hover::after {
   width: 90%;
   height: 100%;
   background-color:  #77fcfe;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
 }
 .form-section input[type="submit"] {
   background: var(--clr-neon);
@@ -995,7 +998,7 @@ a.headerSocial:hover::after {
 .product-dtl p {
   line-height: 24px;
   font-size: 25px;
-  color: var(--clr-neon);
+  color: #77fcfe;
   padding-left: 1em;
 }
 .product-count {
