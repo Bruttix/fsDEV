@@ -1052,10 +1052,13 @@ a.headerSocial:hover::after {
     font-size: 25px;
 }.single-product .col-md-6 mb-3{
     color: #77fcfe
- }
-.single-product .mb-5 {
+ }.single-product .mb-5 {
     background-color: #77fcfe;
     font-size: 25px;
+}.single-product .alert-info {
+    background-color: #77fcfe;
+    font-size: 25px;
+    color: var(--clr-neon);
 }
 
 /* LOGIN */
