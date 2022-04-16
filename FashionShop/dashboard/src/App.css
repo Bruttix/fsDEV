@@ -29,7 +29,7 @@ a.disabled {
   border: 1px solid var(--clr-neon) !important;
 }
 .Header-green {
-  background-color: #FC95CF;
+  background-color: var(--clr-neon);
 }
 /* .screen-overlay {
   width: 0%;
