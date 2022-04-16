@@ -5,7 +5,7 @@ INCLUDE STYLES AND COMPONENTS
 ===================== */
 /* ================== HELPERS =================== */
 .table thead th {
-  color: #adb5bd;
+  color: #6f02a3;
   font-weight: 400;
 }
 .table-lg td,
@@ -692,6 +692,9 @@ a.itemside:hover .title {
 .card-product-grid:hover {
   border-color: #adb5bd;
 }
+.card-header,.card{
+  background: #77fcfe;
+}
 
 /* LARGE LIST STYLE PRODUCT ITEM */
 .card-product-list {
@@ -980,7 +983,30 @@ ul.row-sm {
 .box img {
   max-width: 100%;
 }
-
+/* ======== GRAPHS ======= */
+.saleStatistics{
+  background: #2ABCBC;
+  border: none;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0.7em 0 var(--clr-neon), 0 0 0.7em 0 var(--clr-neon);
+  width: 640px;
+  height: 680px;
+  justify-content: center;
+  width: 100%;
+}.productStatistics{
+  background: #2ABCBC;
+  border: none;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0.7em 0 var(--clr-neon), 0 0 0.7em 0 var(--clr-neon);
+  width: 640px;
+  height: 680px;
+  width: 100%;
+}
+ .table tr{
+  border: solid #53017a;
+  font-size: 30px;
+  color: var(--clr-neon);
+ }
 /* ================= RATINGS ============== */
 .label-rating {
   margin-left: 7px;

@@ -40,7 +40,7 @@ const Header = () => {
               className="form-control"
               placeholder="Search term"
             />
-            <button className="btn btn-light bg" type="button">
+            <button className="neon-button" type="button">
               <i className="far fa-search"></i>
             </button>
           </div>
