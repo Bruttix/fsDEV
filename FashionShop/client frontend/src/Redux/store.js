@@ -19,8 +19,10 @@ import {
   orderListMyReducer,
   orderPayReducer,
 } from "./Reducers/OrderReducres";
+import { couponListReducer } from "./Reducers/CouponReducers";
 
 const reducer = combineReducers({
+  coupon: couponListReducer, 
   productList: productListReducer,
   productDetails: productDetailsReducer,
   productReviewCreate: productCreateReviewReducer,
@@ -50,6 +52,7 @@ const shippingAddressFromLocalStorage = localStorage.getItem("shippingAddress")
   : {};
 
 const initialState = {
+  coupon: 0, 
   cart: {
     cartItems: cartItemsFromLocalStorage,
     shippingAddress: shippingAddressFromLocalStorage,

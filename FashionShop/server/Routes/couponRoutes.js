@@ -16,6 +16,10 @@ couponRoute.post(
       res.status(400);
       throw new Error("Coupon code already exists");
     } else {
+      if (percentDiscount > 100) {
+        res.status(400);
+        throw new Error("percentDiscount Cannot be greater than 100%");
+      }
       const coupon = new Coupon({
         code,
         expirationDate,
@@ -23,11 +27,9 @@ couponRoute.post(
       });
       if (coupon) {
         const createdCoupon = await coupon.save();
-        console.log("coupon exists?");
         res.status(201).json(createdCoupon);
       } else {
         res.status(400);
-        console.log("coupon NOT exists?");
         throw new Error("Invalid coupon data");
       }
     }
@@ -56,6 +58,20 @@ couponRoute.get(
   asyncHandler(async (req, res) => {
     const coupons = await Coupon.find({});
     res.json(coupons);
+  })
+);
+
+// GET SINGLE COUPON
+couponRoute.get(
+  "/:code",
+  asyncHandler(async (req, res) => {
+    const coupon = await Coupon.findOne({ code: req.params.code });
+    if (coupon) {
+      res.json(coupon);
+    } else {
+      res.status(404);
+      throw new Error("Coupon not Found");
+    }
   })
 );
 
