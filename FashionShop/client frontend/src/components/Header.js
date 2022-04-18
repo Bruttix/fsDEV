@@ -100,19 +100,19 @@ const Header = () => {
               </div>
                 
               <div className="col-md-6 col-8 d-flex align-items-center">
-                   <a className="headerSocial" href="https://facebook.com">
+                   <a className="headerSocial" href="https://facebook.com" target="_blank" rel="noreferrer">
                      <i class="headerSocial fab fa-facebook"></i>
                    </a>
-                   <a className="headerSocial" href="https://instagram.com">
+                   <a className="headerSocial" href="https://instagram.com" target ="_blank" rel="noreferrer">
                      <i class="headerSocial fab fa-instagram"></i>
                    </a>
-                   <a className="headerSocial" href="https://twitter.com">
+                   <a className="headerSocial" href="https://twitter.com" target="_blank" rel="noreferrer">
                      <i class="headerSocial fab fa-twitter"></i>
                    </a>
-                   <a className="headerSocial" href="http://linkedin.com">
+                   <a className="headerSocial" href="http://linkedin.com" target="_blank" rel="noreferrer">
                      <i className="headerSocial fab fa-linkedin"></i>
                    </a>
-                   <a className="headerSocial" href="https://github.com/Bruttix/fsDEV">
+                   <a className="headerSocial" href="https://github.com/Bruttix/fsDEV" target ="_blank" rel="noreferrer">
                      <i class="headerSocial fab fa-github"></i>
                    </a>
                 <form onSubmit={submitHandler} className="input-group">
