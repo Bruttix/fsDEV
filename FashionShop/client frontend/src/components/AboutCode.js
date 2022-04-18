@@ -21,7 +21,7 @@ const AboutCode = () => {
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
               <p>jane@example.com</p>
               <a href="http://www.google.com" target="_blank" rel="noreferrer"> 
-              <p><button>Contact</button></p>
+              <p><button class="neon-button3">Contact</button></p>
               </a>
             </div>
           </td>
@@ -36,7 +36,7 @@ const AboutCode = () => {
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
               <p>jane@example.com</p>
               <a href="http://www.google.com" target="_blank" rel="noreferrer"> 
-              <p><button>Contact</button></p>
+              <p><button class="neon-button3">Contact</button></p>
               </a>
             </div>
           </td>
@@ -51,7 +51,7 @@ const AboutCode = () => {
               <p>Assisted with stylizing and creating key elements</p>
               <p>treicruz@gmail.com</p>
               <a href="https://www.linkedin.com/in/trei-cruz/" target="_blank" rel="noreferrer"> 
-              <p><button>Contact</button></p>
+              <p><button class="neon-button3">Contact</button></p>
               </a>
             </div>
           </td>
@@ -68,7 +68,7 @@ const AboutCode = () => {
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
               <p>jane@example.com</p>
               <a href="http://www.google.com" target="_blank" rel="noreferrer"> 
-              <p><button>Contact</button></p>
+              <p><button class="neon-button3">Contact</button></p>
               </a>
             </div>
           </td>
@@ -83,7 +83,7 @@ const AboutCode = () => {
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
               <p>jane@example.com</p>
               <a href="http://www.google.com" target="_blank" rel="noreferrer"> 
-              <p><button>Contact</button></p>
+              <p><button class="neon-button3">Contact</button></p>
               </a>
             </div>
           </td>
@@ -98,7 +98,7 @@ const AboutCode = () => {
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
               <p>jane@example.com</p>
               <a href="http://www.google.com" target="_blank" rel="noreferrer"> 
-              <p><button>Contact</button></p>
+              <p><button class="neon-button3">Contact</button></p>
               </a>
             </div>
           </td>

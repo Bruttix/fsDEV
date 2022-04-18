@@ -1620,18 +1620,3 @@ body {
  html {
   box-sizing: border-box;
 }
-
-.aboutme button {
-  width: 20%;
-  background-color: rgba(255, 0, 255, 0.479);
-  border: 0;
-  text-transform: uppercase;
-  font-size: 20px;
-}
-
-.aboutme button:hover {
-  background-color:rgba(255, 20, 188, 0.164);
- 
-  border: 0px;
-  color: var(--clr-bg);
-}
