@@ -32,9 +32,10 @@ const AboutCode = () => {
               <img
                 alt="Brandon" src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650323580/me1_-_Copy_2_r0ggh7.jpg"
               />
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>jane@example.com</p>
-              <a href="http://www.google.com" target="_blank" rel="noreferrer"> 
+              <p>Frontend creation of pages, components, screens, admin panel, and public domain. </p>
+              <p>Backend mongodb setup with collections & secured form handling actions.</p>
+              <p>usgreene212@gmail.com</p>
+              <a href="https://www.linkedin.com/in/brandondavidgreene/" target="_blank" rel="noreferrer"> 
               <p><button class="neon-button3">Contact</button></p>
               </a>
             </div>
