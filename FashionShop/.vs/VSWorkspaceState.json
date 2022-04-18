@@ -1,12 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\client frontend",
     "\\client frontend\\src",
-    "\\client frontend\\src\\components",
-    "\\client frontend\\src\\components\\homeComponents",
-    "\\client frontend\\src\\screens"
+    "\\dashboard",
+    "\\dashboard\\src",
+    "\\dashboard\\src\\components",
+    "\\dashboard\\src\\components\\Home",
+    "\\dashboard\\src\\components\\orders",
+    "\\dashboard\\src\\components\\products",
+    "\\dashboard\\src\\screens",
+    "\\server\\Middleware"
   ],
-  "SelectedNode": "\\client frontend\\src\\App.css",
+  "SelectedNode": "\\dashboard\\src\\App.css",
   "PreviewInSolutionExplorer": false
 }
