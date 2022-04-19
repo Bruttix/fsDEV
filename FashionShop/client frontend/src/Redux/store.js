@@ -52,7 +52,10 @@ const shippingAddressFromLocalStorage = localStorage.getItem("shippingAddress")
   : {};
 
 const initialState = {
-  coupon: 0, 
+  coupon: {
+    discount: 0,
+    status: "",
+  }, 
   cart: {
     cartItems: cartItemsFromLocalStorage,
     shippingAddress: shippingAddressFromLocalStorage,

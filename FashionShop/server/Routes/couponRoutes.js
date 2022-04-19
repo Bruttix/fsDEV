@@ -10,7 +10,7 @@ couponRoute.post(
   "/",
   asyncHandler(async (req, res) => {
     console.log("couponRoute.post: Got body:", req.body);
-    const { code, expirationDate, percentDiscount } = req.body;
+    const { code, expirationDate, percentDiscount, isEnabled } = req.body;
     const couponExist = await Coupon.findOne({ code });
     if (couponExist) {
       res.status(400);
@@ -23,7 +23,8 @@ couponRoute.post(
       const coupon = new Coupon({
         code,
         expirationDate,
-        percentDiscount
+        percentDiscount, 
+        isEnabled
       });
       if (coupon) {
         const createdCoupon = await coupon.save();
@@ -38,10 +39,10 @@ couponRoute.post(
 
 // DELETE COUPON
 couponRoute.delete(
-  "/:id",
+  "/:code",
   asyncHandler(async (req, res) => {
-    console.log("couponRoute.delete: req.params.id:", req.params.id);
-    const coupon = await Coupon.findById(req.params.id);
+    console.log("couponRoute.delete: req.params.code:", req.params.code);
+    const coupon = await Coupon.findById(req.params.code);
     if (coupon) {
       await coupon.remove();
       res.json({ message: "Coupon deleted" });
@@ -71,6 +72,29 @@ couponRoute.get(
     } else {
       res.status(404);
       throw new Error("Coupon not Found");
+    }
+  })
+);
+
+// UPDATE COUPON
+couponRoute.put(
+  "/:code",
+  asyncHandler(async (req, res) => {
+    console.log("couponRoute.put: req.params.code:", req.params.code);
+    console.log("couponRoute.put: Got body:", req.body);
+    const { code, expirationDate, percentDiscount, isEnabled } = req.body;
+    const coupon = await Coupon.findOne({ code: req.params.code });
+    if (coupon) {
+      coupon.code = code || coupon.code;
+      coupon.expirationDate = expirationDate || coupon.expirationDate;
+      coupon.percentDiscount = percentDiscount || coupon.percentDiscount;
+      coupon.isEnabled = isEnabled;
+
+      const updatedCoupon = await coupon.save();
+      res.json(updatedCoupon);
+    } else {
+      res.status(404);
+      throw new Error("Coupon not found");
     }
   })
 );
