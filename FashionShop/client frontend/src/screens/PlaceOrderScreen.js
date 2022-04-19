@@ -38,7 +38,7 @@ const PlaceOrderScreen = ({ history }) => {
     }
   //cart itemsPrice needs to deduct the appropriate coupon discount amount , BEFORE tax application
   cart.totalPrice = (
-    Number(cart.itemsPrice) - ((Number(coupon) / 100) * Number(cart.itemsPrice)) + Number(cart.shippingPrice) + Number(cart.taxPrice)
+    Number(cart.itemsPrice) - ((Number(coupon.discount) / 100) * Number(cart.itemsPrice)) + Number(cart.shippingPrice) + Number(cart.taxPrice)
   ).toFixed(2);
 
   const orderCreate = useSelector((state) => state.orderCreate);
@@ -216,7 +216,7 @@ const PlaceOrderScreen = ({ history }) => {
                   <td>
                     <strong>Coupon Savings</strong>
                   </td>
-                  <td>${ ((Number(coupon) / 100) * Number(cart.itemsPrice)).toFixed(2) }</td>
+                  <td>${ ((Number(coupon.discount) / 100) * Number(cart.itemsPrice)).toFixed(2) }</td>
                 </tr>
                 <tr>
                   <td>
