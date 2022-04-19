@@ -41,7 +41,7 @@ const Footer = () => {
             <a href="#carousel__slide3"
               class="carousel__prev"> </a>
             <a href="#carousel__slide1"
-              class="carousel__next">Go to first slide</a>
+              class="carousel__next"> </a>
           </li>
         </ol>
       </section>
