@@ -207,8 +207,7 @@ a.disabled {
         
     }
 .neon-button3 {
-    /* font-size: 1.5rem; */
-    font-size: 4rem;
+    font-size: 1.5rem;
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
@@ -237,12 +236,12 @@ a.disabled {
 .neon-button3::after {
     content: "";
     position: absolute;
-    height: 80px;
-    width: 60px;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    /* height: 80px;
+    width: 60px; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     box-shadow: 0 0 2em 0.5em var(--clr-neon);
     opacity: 0;
     background-color: transparent;
@@ -580,10 +579,9 @@ body.aside-mini .menu-aside .menu-item.has-submenu .menu-link:after {
   margin-bottom: 20px;
 }
 .card-title{
-  margin-top: 700px;
-  margin-bottom: 26px;
+  margin-top: 20px;
   color: var(--clr-neon);
-  font-size: 100px;
+  font-size: 30px;
 }
 .b {
   font-weight: 600;
@@ -721,7 +719,6 @@ a.itemside:hover .title {
   margin-bottom: 20px;
 }
 .card-user .card-header {
-  width: 100%;
   position: relative;
   height: 100px;
   background-color: #77fcfe !important;
@@ -733,7 +730,6 @@ a.itemside:hover .title {
   top: 100%;
 }
 .card-user .card-body {
-  height: 600px;
   text-align: center;
 }
 
@@ -948,15 +944,8 @@ ul.row-sm {
 }
 .signInCard {
     box-shadow: 7px 12px 5px var(--clr-neon);
-    /* max-width: 600px;
-    margin-top: 200px; */
-    width: 2500px;
-    height: 2000px;
-    /* height:30rem; */
-    position: absolute;
-    top: 500px;
-    margin: 0 auto;
-    left: 1700px; 
+    max-width: 600px;
+    margin-top: 200px;
     
 }
 /**/
@@ -1082,11 +1071,9 @@ ul.row-sm {
 .form-control {
   margin: 0 auto;
   display: block;
-  width: 38%;
+  width: 60%;
   background-color: var(--clr-neon);
   color: white;
-  height: 91px;
-  font-size: 3rem;
   font: bolder;
 }
 .form-control::placeholder{
