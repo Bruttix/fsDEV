@@ -43,7 +43,21 @@ export const listCouponDetails = (code) => async (dispatch, getState) => {
       });
     } 
     else {
-      // Else valid coupon has been received, dispatch
+      // Create duplicate record of data
+      let updatedCoupon = {
+        code: data.code, 
+        expirationDate: data.expirationDate, 
+        percentDiscount: data.percentDiscount,
+        isEnabled: false
+      };
+      // Since coupon is going to be used, set isEnabled to false and update the record
+      try {
+        await axios.put(`/api/coupons/${code}`, updatedCoupon);
+      } catch (error) {
+        const message = error.response && error.response.data.message ? error.response.data.message : error.message;
+        dispatch({type: COUPON_DETAILS_FAIL, payload: message});
+      }
+      // valid coupon has been received, dispatch
       dispatch({
       type: COUPON_DETAILS_SUCCESS, 
       payload: data
