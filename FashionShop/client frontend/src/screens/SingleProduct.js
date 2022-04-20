@@ -155,6 +155,7 @@ const SingleProduct = ({ history, match }) => {
                 </div>
               </div>
             </div>
+            <br/>
             <div>                          
                <ImageGalleryComponent/>
             </div>
