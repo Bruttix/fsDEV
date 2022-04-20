@@ -1,16 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\client frontend\\src",
     "\\dashboard",
     "\\dashboard\\src",
     "\\dashboard\\src\\components",
-    "\\dashboard\\src\\components\\Home",
-    "\\dashboard\\src\\components\\orders",
-    "\\dashboard\\src\\components\\products",
-    "\\dashboard\\src\\screens",
-    "\\server\\Middleware"
+    "\\dashboard\\src\\screens"
   ],
-  "SelectedNode": "\\dashboard\\src\\App.css",
+  "SelectedNode": "\\dashboard\\readME.txt.txt",
   "PreviewInSolutionExplorer": false
 }

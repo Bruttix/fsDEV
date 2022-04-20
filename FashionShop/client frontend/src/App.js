@@ -21,7 +21,6 @@ import About from "./screens/About";
 import Custom from "./screens/Custom";
 import PrivateRouter from "./PrivateRouter";
 
-
 const App = () => {
   return (
     <Router>

@@ -11,6 +11,7 @@ import {
 import Loading from "../components/LoadingError/Loading";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../Redux/Constants/ProductConstants";
 import moment from "moment";
+import ImageGalleryComponent from '../components/homeComponents/image-gallery.component';
 
 const SingleProduct = ({ history, match }) => {
   const [qty, setQty] = useState(1);
@@ -19,7 +20,18 @@ const SingleProduct = ({ history, match }) => {
 
   const productId = match.params.id;
   const dispatch = useDispatch();
-
+  /*const productImages = [
+        require('./productAssets/d1.jpg'),
+        require('./productAssets/d2.jpg'),
+        require('./productAssets/d3.jpg'),
+  ];*/
+/*  var productImages = new Array();
+    productImages[0] = new Image();
+    productImages[0].src = './productAssets/d1.jpg';
+    productImages[1] = new Image();
+    productImages[1].src = './productAssets/d2.jpg';
+    productImages[2] = new Image();
+    productImages[2].src = './productAssets/d3.jpg';*/
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
   const userLogin = useSelector((state) => state.userLogin);
@@ -67,8 +79,11 @@ const SingleProduct = ({ history, match }) => {
             <div className="row">
               <div className="col-md-6">
                 <div className="container">
-                  <img className="img_product" src={product.image} alt={product.name} />
+                  <img className="img_productSingle" src={product.image} alt={product.name} />
                 </div>
+                
+                  
+                
               </div>
               <div className="col-md-6">
                 <div className="product-dtl">
@@ -89,6 +104,23 @@ const SingleProduct = ({ history, match }) => {
                       ) : (
                         <span>unavailable</span>
                       )}
+                    </div>  
+                    <div className="flex-box d-flex justify-content-between align-items-center">
+                      <h6>Sizes</h6>
+                         {product.countInStock > 0 ? (
+                          <>
+                              <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                                {[...Array(product.countInStock).keys()].map(
+                                  (x) => (
+                                    <option key={x + 1} value={x + 1}>
+                                      {x + 1}
+                                    </option>
+                                  )
+                                )}
+                              </select>
+                          
+                          </>
+                        ) : null}
                     </div>
                     <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Reviews</h6>
@@ -123,7 +155,9 @@ const SingleProduct = ({ history, match }) => {
                 </div>
               </div>
             </div>
-
+            <div>                          
+               <ImageGalleryComponent/>
+            </div>
             {/* RATING */}
             <div className="row my-5">
               <div className="col-md-6">
