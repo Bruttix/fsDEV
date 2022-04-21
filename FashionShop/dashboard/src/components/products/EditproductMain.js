@@ -25,6 +25,11 @@ const EditProductMain = (props) => {
   const [price, setPrice] = useState(0);
   const [image, setImage] = useState("");
   const [countInStock, setCountInStock] = useState(0);
+  const [sizeInStockXS, setSizeInStockXS] = useState(0);
+  const [sizeInStockS, setSizeInStockS] = useState(0);
+  const [sizeInStockM, setSizeInStockM] = useState(0);
+  const [sizeInStockL, setSizeInStockL] = useState(0);
+  const [sizeInStockXL, setSizeInStockXL] = useState(0);
   const [description, setDescription] = useState("");
 
   const dispatch = useDispatch();
@@ -50,6 +55,11 @@ const EditProductMain = (props) => {
         setName(product.name);
         setDescription(product.description);
         setCountInStock(product.countInStock);
+        setSizeInStockXS(product.sizeInStockXS);
+        setSizeInStockS(product.sizeInStockS);
+        setSizeInStockM(product.sizeInStockM);
+        setSizeInStockL(product.sizeInStockL);
+        setSizeInStockXL(product.sizeInStockXL);
         setImage(product.image);
         setPrice(product.price);
       }
@@ -66,6 +76,7 @@ const EditProductMain = (props) => {
         description,
         image,
         countInStock,
+        sizeInStockXS,sizeInStockS,sizeInStockM,sizeInStockL,sizeInStockXL,
       })
     );
   };
@@ -141,6 +152,76 @@ const EditProductMain = (props) => {
                           required
                           value={countInStock}
                           onChange={(e) => setCountInStock(e.target.value)}
+                        />
+                      </div> 
+                      <div className="mb-4">
+                        <label htmlFor="product_price" className="form-label">
+                          Extra Small in Stock
+                        </label>
+                        <input
+                          type="number"
+                          placeholder="Type here"
+                          className="form-control"
+                          id="product_price"
+                          required
+                          value={sizeInStockXS}
+                          onChange={(e) => setSizeInStockXS(e.target.value)}
+                        />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="product_price" className="form-label">
+                          Small in Stock
+                        </label>
+                        <input
+                          type="number"
+                          placeholder="Type here"
+                          className="form-control"
+                          id="product_price"
+                          required
+                          value={sizeInStockS}
+                          onChange={(e) => setSizeInStockS(e.target.value)}
+                        />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="product_price" className="form-label">
+                          Medium in Stock
+                        </label>
+                        <input
+                          type="number"
+                          placeholder="Type here"
+                          className="form-control"
+                          id="product_price"
+                          required
+                          value={sizeInStockM}
+                          onChange={(e) => setSizeInStockM(e.target.value)}
+                        />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="product_price" className="form-label">
+                          Large in Stock
+                        </label>
+                        <input
+                          type="number"
+                          placeholder="Type here"
+                          className="form-control"
+                          id="product_price"
+                          required
+                          value={sizeInStockL}
+                          onChange={(e) => setSizeInStockL(e.target.value)}
+                        />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="product_price" className="form-label">
+                          Extra Large in Stock
+                        </label>
+                        <input
+                          type="number"
+                          placeholder="Type here"
+                          className="form-control"
+                          id="product_price"
+                          required
+                          value={sizeInStockXL}
+                          onChange={(e) => setSizeInStockXL(e.target.value)}
                         />
                       </div>
                       <div className="mb-4">

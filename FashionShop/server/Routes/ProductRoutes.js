@@ -114,7 +114,11 @@ productRoute.post(
   protect,
   admin,
   asyncHandler(async (req, res) => {
-    const { name, price, description, image, countInStock } = req.body;
+      const { name, price, description, image, countInStock, sizeInStockXS,
+          sizeInStockS,
+          sizeInStockM,
+          sizeInStockL,
+          sizeInStockXL } = req.body;
     const productExist = await Product.findOne({ name });
     if (productExist) {
       res.status(400);
@@ -126,6 +130,11 @@ productRoute.post(
         description,
         image,
         countInStock,
+        sizeInStockXS,
+        sizeInStockS,
+        sizeInStockM,
+        sizeInStockL,
+        sizeInStockXL,
         user: req.user._id,
       });
       if (product) {
@@ -145,7 +154,11 @@ productRoute.put(
   protect,
   admin,
   asyncHandler(async (req, res) => {
-    const { name, price, description, image, countInStock } = req.body;
+      const { name, price, description, image, countInStock, sizeInStockXS,
+          sizeInStockS,
+          sizeInStockM,
+          sizeInStockL,
+          sizeInStockXL, } = req.body;
     const product = await Product.findById(req.params.id);
     if (product) {
       product.name = name || product.name;
@@ -153,6 +166,11 @@ productRoute.put(
       product.description = description || product.description;
       product.image = image || product.image;
       product.countInStock = countInStock || product.countInStock;
+      product.sizeInStockXS = sizeInStockXS || product.sizeInStockXS;
+      product.sizeInStockS = sizeInStockS || product.sizeInStockS;
+      product.sizeInStockM = sizeInStockM || product.sizeInStockM;
+      product.sizeInStockL = sizeInStockL || product.sizeInStockL;
+      product.sizeInStockXL = sizeInStockXL || product.sizeInStockXL;
 
       const updatedProduct = await product.save();
       res.json(updatedProduct);

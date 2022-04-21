@@ -20,18 +20,7 @@ const SingleProduct = ({ history, match }) => {
 
   const productId = match.params.id;
   const dispatch = useDispatch();
-  /*const productImages = [
-        require('./productAssets/d1.jpg'),
-        require('./productAssets/d2.jpg'),
-        require('./productAssets/d3.jpg'),
-  ];*/
-/*  var productImages = new Array();
-    productImages[0] = new Image();
-    productImages[0].src = './productAssets/d1.jpg';
-    productImages[1] = new Image();
-    productImages[1].src = './productAssets/d2.jpg';
-    productImages[2] = new Image();
-    productImages[2].src = './productAssets/d3.jpg';*/
+ 
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
   const userLogin = useSelector((state) => state.userLogin);
@@ -106,19 +95,23 @@ const SingleProduct = ({ history, match }) => {
                       )}
                     </div>  
                     <div className="flex-box d-flex justify-content-between align-items-center">
-                      <h6>Sizes</h6>
+                      <h6>Select Size</h6>
                          {product.countInStock > 0 ? (
-                          <>
-                              <select value={qty} onChange={(e) => setQty(e.target.value)}>
-                                {[...Array(product.countInStock).keys()].map(
-                                  (x) => (
-                                    <option key={x + 1} value={x + 1}>
-                                      {x + 1}
-                                    </option>
-                                  )
-                                )}
-                              </select>
-                          
+                          <>{product.sizeInStockXS > 0 ? (
+                            <button className="sizesButton" value="XS">XS</button>
+                            ) : null}
+                            {product.sizeInStockS > 0 ? (
+                            <button className="sizesButton" value="S">S</button>
+                            ) : null}
+                            {product.sizeInStockM > 0 ? (
+                            <button className="sizesButton" value="M">M</button>
+                            ) : null}
+                            {product.sizeInStockL > 0 ? (
+                            <button className="sizesButton" value="L">L</button>
+                            ) : null}
+                            {product.sizeInStockXL > 0 ? (
+                            <button className="sizesButton" value="XL">XL</button>
+                            ) : null}
                           </>
                         ) : null}
                     </div>
