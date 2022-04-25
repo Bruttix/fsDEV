@@ -180,7 +180,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* Sub Header & navbar */}
+       Sub Header & navbar 
       <div className="Announcement ">
         <div className="container">
             <div>
@@ -194,6 +194,7 @@ const Header = () => {
             </div>
         </div>
       </div>
+      
     </div>
   );
 };

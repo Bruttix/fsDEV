@@ -1,5 +1,6 @@
 import {
   CART_ADD_ITEM,
+  CART_SIZE_ITEM,
   CART_CLEAR_ITEMS,
   CART_REMOVE_ITEM,
   CART_SAVE_PAYMENT_METHOD,
@@ -27,7 +28,12 @@ export const cartReducer = (
           ...state,
           cartItems: [...state.cartItems, item],
         };
-      }
+          }
+      case CART_SIZE_ITEM:
+      return {
+        ...state,
+        sizeChosen: action.payload,
+      };
     case CART_REMOVE_ITEM:
       return {
         ...state,

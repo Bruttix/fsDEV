@@ -4,6 +4,7 @@ import Rating from "../components/homeComponents/Rating";
 import { Link } from "react-router-dom";
 import Message from "./../components/LoadingError/Error";
 import { useDispatch, useSelector } from "react-redux";
+import { addToCart, sizeToCart } from "./../Redux/Actions/cartActions";
 import {
   createProductReview,
   listProductDetails,
@@ -14,13 +15,13 @@ import moment from "moment";
 import ImageGalleryComponent from '../components/homeComponents/image-gallery.component';
 
 const SingleProduct = ({ history, match }) => {
-  const [qty, setQty] = useState(1);
+  const [qty, setQty] = useState([]);
+  const [sizeChosen, setSizeChosen] = useState([]);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
 
   const productId = match.params.id;
   const dispatch = useDispatch();
- 
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
   const userLogin = useSelector((state) => state.userLogin);
@@ -31,7 +32,16 @@ const SingleProduct = ({ history, match }) => {
     error: errorCreateReview,
     success: successCreateReview,
   } = productReviewCreate;
-
+  useEffect(() => {
+    if (productId) {
+      dispatch(addToCart(productId, qty, sizeChosen));
+      }
+  }, [dispatch, productId, qty, sizeChosen]);
+  useEffect(() => {
+    if (productId) {
+      dispatch(sizeToCart(productId, sizeChosen, qty));
+      }
+  }, [dispatch, productId, sizeChosen, qty]);
   useEffect(() => {
     if (successCreateReview) {
       alert("Review Submitted");
@@ -43,8 +53,8 @@ const SingleProduct = ({ history, match }) => {
   }, [dispatch, productId, successCreateReview]);
 
   const AddToCartHandle = (e) => {
-    e.preventDefault();
-    history.push(`/cart/${productId}?qty=${qty}`);
+      e.preventDefault();
+      history.push(`/cart/${productId}?qty=${qty}`);
   };
   const submitHandler = (e) => {
     e.preventDefault();
@@ -94,27 +104,7 @@ const SingleProduct = ({ history, match }) => {
                         <span>unavailable</span>
                       )}
                     </div>  
-                    <div className="flex-box d-flex justify-content-between align-items-center">
-                      <h6>Select Size</h6>
-                         {product.countInStock > 0 ? (
-                          <>{product.sizeInStockXS > 0 ? (
-                            <button className="sizesButton" value="XS">XS</button>
-                            ) : null}
-                            {product.sizeInStockS > 0 ? (
-                            <button className="sizesButton" value="S">S</button>
-                            ) : null}
-                            {product.sizeInStockM > 0 ? (
-                            <button className="sizesButton" value="M">M</button>
-                            ) : null}
-                            {product.sizeInStockL > 0 ? (
-                            <button className="sizesButton" value="L">L</button>
-                            ) : null}
-                            {product.sizeInStockXL > 0 ? (
-                            <button className="sizesButton" value="XL">XL</button>
-                            ) : null}
-                          </>
-                        ) : null}
-                    </div>
+                      
                     <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Reviews</h6>
                       <Rating
@@ -139,6 +129,45 @@ const SingleProduct = ({ history, match }) => {
                             )}
                           </select>
                         </div>
+                        {product.countInStock > 0 ? (
+                        <>
+                         <div className="flex-box d-flex justify-content-between align-items-center">
+                          <h6>Size</h6>
+                          <select
+                            value={sizeChosen}
+                            onChange={(e) => setSizeChosen(e.target.value)}
+                          >
+                            {product.sizeInStockXS > 0 ? (
+                                <option key='XS' value={0}> 0 &#8212; X-Small </option>
+                            ) : (
+                                console.log('size option XS out of stock')
+                            )}
+                            {product.sizeInStockS > 0 ? (
+                                <option key={1} value={1}> 1 &#8212; Small </option>
+                            ) : (
+                                console.log('size option S out of stock')
+                            )}
+                            {product.sizeInStockM > 0 ? (
+                                <option key={2} value={2}> 2 &#8212; Medium </option>
+                            ) : (
+                                console.log('size option M out of stock')
+                            )}
+                            {product.sizeInStockL > 0 ? (
+                                <option key={3} value={3}> 3 &#8212; Large </option>
+                            ) : (
+                               console.log('size option L out of stock')
+                            )}
+                            {product.sizeInStockXL > 0 ? (
+                                <option key={4} value={4}> 4 &#8212; X-Large </option>
+                            ) : (
+                                console.log('size option XL out of stock')
+                            )}
+                                
+                             
+                          </select>
+                         </div>
+                        </>
+                        ) : null}
                         <button onClick={AddToCartHandle} className="neon-button2">
                           Add To Cart
                         </button>

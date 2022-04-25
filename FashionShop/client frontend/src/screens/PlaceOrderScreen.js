@@ -14,7 +14,7 @@ const PlaceOrderScreen = ({ history }) => {
   const coupon = useSelector((state) => state.coupon);
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
-
+    console.log(useSelector((state) => state));
   // Coupon
 
   // Calculate Price
@@ -23,8 +23,8 @@ const PlaceOrderScreen = ({ history }) => {
     };
   const shippingTaxPrice = (num) => {
     return (num + 15).toFixed(2);
-  };
-
+    };
+  const sizeChosen = cart.sizeChosen;
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
@@ -61,6 +61,7 @@ const PlaceOrderScreen = ({ history }) => {
         shippingPrice: cart.shippingPrice,
         taxPrice: cart.taxPrice,
         totalPrice: cart.totalPrice,
+        sizeChosen: cart.sizeChosen,
       })
     );
   };
@@ -156,6 +157,7 @@ const PlaceOrderScreen = ({ history }) => {
               <Message variant="alert-info mt-5">Your cart is empty</Message>
             ) : (
               <>
+                
                 {cart.cartItems.map((item, index) => (
                   <div className="order-product row" key={index}>
                     <div className="col-md-3 col-6">
@@ -166,9 +168,13 @@ const PlaceOrderScreen = ({ history }) => {
                         <h6>{item.name}</h6>
                       </Link>
                     </div>
-                    <div className="mt-3 mt-md-0 col-md-2 col-6  d-flex align-items-center flex-column justify-content-center ">
+                    <div className="mt-3 mt-md-0  col-6  d-flex align-items-center flex-column justify-content-center ">
                       <h4>QUANTITY</h4>
                       <h6>{item.qty}</h6>
+                    </div>
+                    <div className="mt-3 mt-md-0 col-md-2 col-6  d-flex align-items-center flex-column justify-content-center ">
+                      <h4>SIZE</h4>
+                      <h6>{item.sizeChosen}</h6>
                     </div>
                     <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
                       <h4>SUBTOTAL</h4>

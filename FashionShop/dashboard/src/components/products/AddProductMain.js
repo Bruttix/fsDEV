@@ -19,13 +19,13 @@ const AddProductMain = () => {
   const [price, setPrice] = useState(0);
   const [image, setImage] = useState("");
   const [countInStock, setCountInStock] = useState(0);
+  const [sizeChosen, setSizeChosen] = useState(0);
   const [sizeInStockXS, setSizeInStockXS] = useState(0);
   const [sizeInStockS, setSizeInStockS] = useState(0);
   const [sizeInStockM, setSizeInStockM] = useState(0);
   const [sizeInStockL, setSizeInStockL] = useState(0);
   const [sizeInStockXL, setSizeInStockXL] = useState(0);
   const [description, setDescription] = useState("");
-
   const dispatch = useDispatch();
 
   const productCreate = useSelector((state) => state.productCreate);
@@ -45,12 +45,13 @@ const AddProductMain = () => {
       setSizeInStockM(0);
       setSizeInStockL(0);
       setSizeInStockXL(0);
+      setSizeChosen(0);
     }
   }, [product, dispatch]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(createProduct(name, price, description, image, countInStock, sizeInStockXS, sizeInStockS, sizeInStockM, sizeInStockL, sizeInStockXL));
+    dispatch(createProduct(name, price, description, image, countInStock,sizeChosen, sizeInStockXS, sizeInStockS, sizeInStockM, sizeInStockL, sizeInStockXL));
   };
 
   return (

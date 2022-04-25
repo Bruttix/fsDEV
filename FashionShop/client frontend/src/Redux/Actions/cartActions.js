@@ -2,13 +2,14 @@
 import axios from "axios";
 import {
   CART_ADD_ITEM,
+  CART_SIZE_ITEM,
   CART_REMOVE_ITEM,
   CART_SAVE_PAYMENT_METHOD,
   CART_SAVE_SHIPPING_ADDRESS,
 } from "../Constants/CartConstants";
 
 // ADD TO CART
-export const addToCart = (id, qty) => async (dispatch, getState) => {
+export const addToCart = (id, qty, sizeChosen) => async (dispatch, getState) => {
     const { data } = await axios.get(`/api/products/${id}`);
 
   dispatch({
@@ -18,17 +19,43 @@ export const addToCart = (id, qty) => async (dispatch, getState) => {
       name: data.name,
       image: data.image,
       price: data.price,
+      sizeChosen,
       countInStock: data.countInStock,
       sizeInStockXS: data.sizeInStockXS,
       sizeInStockS: data.sizeInStockS,
       sizeInStockM: data.sizeInStockM,
       sizeInStockL: data.sizeInStockL,
       sizeInStockXL: data.sizeInStockXL,
-      qty,
+      qty
     },
   });
 
   localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+};
+
+// SIZE SELECTED FOR CART 
+export const sizeToCart = (id, sizeChosen , qty) => async (dispatch, getState) => {
+    const { data } = await axios.get(`/api/products/${id}`);
+
+    dispatch({
+        type: CART_SIZE_ITEM,
+        payload: {
+            product: data._id,
+            name: data.name,
+            image: data.image,
+            price: data.price,
+            qty,
+            countInStock: data.countInStock,
+            sizeInStockXS: data.sizeInStockXS,
+            sizeInStockS: data.sizeInStockS,
+            sizeInStockM: data.sizeInStockM,
+            sizeInStockL: data.sizeInStockL,
+            sizeInStockXL: data.sizeInStockXL,
+            sizeChosen
+        },
+    });
+
+    localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };
 
 // REMOVE PRODUCT FROM CART

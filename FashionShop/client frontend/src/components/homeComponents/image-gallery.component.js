@@ -9,22 +9,22 @@ class ImageGalleryComponent extends React.Component {
                 <h2>At another glance...</h2>
                 <Carousel autoPlay interval="5000" transitionTime="600">
                     <div className="singleProductCarousel">
-                        <img src="https://picsum.photos/500/600?img=1" />
+                        <img src="https://picsum.photos/500/600?img=1" alt="random"/>
                     </div>
                     <div className="singleProductCarousel">
-                        <img src="https://picsum.photos/500/600?img=2" />
+                        <img src="https://picsum.photos/500/600?img=2" alt="random" />
                     </div>
                     <div className="singleProductCarousel">
-                        <img src="https://picsum.photos/500/600?img=3" />
+                        <img src="https://picsum.photos/500/600?img=3" alt="random"/>
                     </div>
                     <div className="singleProductCarousel">
-                        <img src="https://picsum.photos/500/600?img=4" />
+                        <img src="https://picsum.photos/500/600?img=4" alt="random"/>
                     </div>
                     <div className="singleProductCarousel">
-                        <img src="https://picsum.photos/500/600?img=5" />
+                        <img src="https://picsum.photos/500/600?img=5" alt="random"/>
                     </div>
                     <div className="singleProductCarousel">
-                        <img src="https://picsum.photos/500/600?img=6" />
+                        <img src="https://picsum.photos/500/600?img=6" alt="random"/>
                     </div>
                 </Carousel>
             </div>

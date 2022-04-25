@@ -168,20 +168,21 @@ const OrderScreen = ({ match }) => {
                         <div className="col-md-3 col-6">
                           <img src={item.image} alt={item.name} />
                         </div>
-                        <div className="col-md-5 col-6 d-flex align-items-center">
+                        <div className="col-md-5 col-6 align-items-center">
                           <Link to={`/products/${item.product}`}>
                             <h6>{item.name}</h6>
-                          </Link>
+                                </Link>
+                               <div className="col-md-5 col-6 d-flex align-items-center">
+                                <h4 className="placeOrderScreenVars">SIZE</h4>
+                                <h6 className="placeOrderScreenVars">{item.sizeChosen}</h6>
+                                <h4 className="placeOrderScreenVars">QUANTITY</h4>
+                                <h6 className="placeOrderScreenVars">{item.qty}</h6>
+                                <h4 className="placeOrderScreenVars">SUBTOTAL </h4>
+                                <h6 className="placeOrderScreenVars">${item.qty * item.price}</h6>
+                               </div>
                         </div>
-                        <div className="mt-3 mt-md-0 col-md-2 col-6  d-flex align-items-center flex-column justify-content-center ">
-                          <h4>QUANTITY</h4>
-                          <h6>{item.qty}</h6>
-                        </div>
-                        <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
-                          <h4>SUBTOTAL</h4>
-                          <h6>${item.qty * item.price}</h6>
-                        </div>
-                      </div>
+                       </div>
+                      
                     ))}
                   </>
                 )}

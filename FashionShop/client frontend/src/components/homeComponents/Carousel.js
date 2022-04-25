@@ -107,21 +107,21 @@ const Carousel = (props) => {
         // not fired yet, so let's listen for the event
         window.addEventListener("DOMContentLoaded", runWhenPageIsFullyParsed);
     }
-        return (
-            <div className="rowCarousel">
+    return (
+
+        <div className="rowCarousel">
                 <script src="Carousel.js"></script>
-                
                 <div className="containerCarousel">
                     <button className="handleBar left-handle">
                         <div className="textHandleBar">&#8249;</div>
                     </button>
                     <div className="slider">
-                        <img src="https://via.placeholder.com/210/00DDD0?text=1" alt="placehold" />
-                        <img src="https://via.placeholder.com/220/00DDD0?text=2" alt="placehold" />
-                        <img src="https://via.placeholder.com/230/00DDD0?text=3" alt="placehold" />
-                        <img src="https://via.placeholder.com/240/00DDD0?text=4" alt="placehold" />
-                        <img src="https://via.placeholder.com/250/00DDD0?text=5" alt="placehold" />
-                        <img src="https://via.placeholder.com/260/00DDD0?text=6" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather1_nnxkw7.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather2_tegvre.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather4_cpzavl.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865599/heather3_urdphj.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather6_bilirl.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather5_evmunf.jpg" alt="placehold" />
                     </div>
                     <button className="handleBar right-handle">
                         <div className="textHandleBar">&#8250;</div>

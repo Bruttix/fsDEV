@@ -2,7 +2,22 @@ import React from "react";
 
 const ContactInfo = () => {
   return (
-    <div className="contactInfo container">
+      <div className="contactInfo container">
+          {/* Sub Header & navbar */}
+          <div className="Announcement ">
+              <div className="container">
+                  <div>
+                      <ul className="headerNavBar">
+                          <li><a href="/GirlsScreen" data-text="Girls">Girls</a></li>
+                          <li><a href="/GuysScreen" data-text="Guys">Guys</a></li>
+                          <li><a href="/Accessories" data-text="Accessories">Accessories</a></li>
+                          <li><a href="/About" data-text="About">About</a></li>
+                          <li><a href="/Custom" data-text="Contact">Contact</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+         <br></br> <br></br>
       <div className="row">
         <div className="col-12 col-md-4 contact-Box">
           <div className="box-info">
@@ -29,8 +44,9 @@ const ContactInfo = () => {
             <div className="info-image">
               <i className="fas fa-fax"></i>
             </div>
-            <h5>Fax</h5>
-            <p>0420 232 0420</p>
+            <h5>TikTok</h5>
+            <p>VintageVixen80s</p> 
+            <p>&#10003;</p>
           </div>
         </div>
       </div>

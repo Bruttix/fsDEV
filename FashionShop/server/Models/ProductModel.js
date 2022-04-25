@@ -54,22 +54,31 @@ const productSchema = mongoose.Schema(
       type: Number,
       required: true,
       default: 0,
-    },sizeInStockS: {
+    },
+    sizeInStockS: {
       type: Number,
       required: true,
       default: 0,
-    },sizeInStockM: {
+    },
+    sizeInStockM: {
       type: Number,
       required: true,
       default: 0,
-    },sizeInStockL: {
+    },
+    sizeInStockL: {
       type: Number,
       required: true,
       default: 0,
-    },sizeInStockXL: {
+    },
+    sizeInStockXL: {
       type: Number,
       required: true,
       default: 0,
+    },
+    sizeChosen: {
+      type: Number,
+      default: 0,
+      required: true,
     },
   },
   {

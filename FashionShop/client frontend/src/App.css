@@ -1,6 +1,7 @@
 /*Carousel*/
 *, *::after, *::before {
     box-sizing: border-box;
+
 }
 :root {
     --handleBar-size: 3rem;
@@ -27,11 +28,12 @@ body {
     transition: transform 250ms ease-in-out;
 }
     .slider > img {
-        flex: 0 0 calc(100% / var(--items-per-screen));
-        max-width: calc(100% / var(--items-per-screen));
-        aspect-ratio: 22 / 9;
+        flex: content;
+        max-width: calc(70% / var(--items-per-screen));
+        aspect-ratio: 16 / 7;
         padding: var(--img-gap);
         border-radius: 1rem;
+        
     }
 .handleBar {
     border: none;
@@ -274,8 +276,15 @@ h6{
 h4 {
   color: #77fcfe;
 }
-h5{
-  color: #77fcfe;
+h4.placeOrderScreenVars {
+  font-size: 1.75rem;
+}
+h6.placeOrderScreenVars{
+  padding: 0 5%;
+  font-size: 1.85rem;
+}
+h5 {
+    color: #77fcfe;
 }
 a:hover {
     color: #77fcfe;
@@ -900,7 +909,7 @@ a.headerSocial:hover::after {
     border-radius: 0.25em;
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
     box-shadow: inset 0 0 0.7em 0 var(--clr-neon), 0 0 0.7em 0 var(--clr-neon);
-    position: relative;
+    position: inherit;
 }
 
     .sizesButton::before {
@@ -1115,12 +1124,14 @@ a.headerSocial:hover::after {
   font-size: 2rem;
 }
 .product-count .flex-box select {
-  background-color: var(--clr-neon);
+  background-color: none;
   width: 150px;
   height: 40px;
   text-align: center;
   border: 0px;
   border-radius: 5px;
+  font: bolder;
+  font-size: 1.5rem;
 }
 .round-black-btn {
   border-radius: 4px;

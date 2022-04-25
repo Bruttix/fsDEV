@@ -12,6 +12,28 @@ import {
 } from "../Constants/ProductConstants";
 import { logout } from "./userActions";
 
+export const addToCart = (id, qty, sizeChosen) => async (dispatch, getState) => {
+    const { data } = await axios.get(`/api/products/${id}`);
+
+    dispatch({
+        type: PRODUCT_LIST_SUCCESS,
+        payload: {
+            product: data._id,
+            name: data.name,
+            image: data.image,
+            price: data.price,
+            countInStock: data.countInStock,
+            sizeInStockXS: data.sizeInStockXS,
+            sizeInStockS: data.sizeInStockS,
+            sizeInStockM: data.sizeInStockM,
+            sizeInStockL: data.sizeInStockL,
+            sizeInStockXL: data.sizeInStockXL,
+            qty, sizeChosen: sizeChosen
+        },
+    });
+
+    localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+};
 // PRODUCT LIST
 export const listProduct = (keyword = " ", pageNumber = " ") =>
   async (dispatch) => {
