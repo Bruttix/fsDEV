@@ -28,12 +28,11 @@ body {
     transition: transform 250ms ease-in-out;
 }
     .slider > img {
-        flex: content;
+        flex: 0 0 calc(100% / var(--items-per-screen));
         max-width: calc(70% / var(--items-per-screen));
-        aspect-ratio: 16 / 7;
+        aspect-ratio: 16 / 9;
         padding: var(--img-gap);
         border-radius: 1rem;
-        
     }
 .handleBar {
     border: none;
