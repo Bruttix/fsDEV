@@ -3,45 +3,45 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer">
+      
       <div>
-
-      <section class="carousel" aria-label="Gallery">
-        <ol class="carousel__viewport">
-          <li id="carousel__slide1"
+      <section class="carousel_bottom" aria-label="Gallery">
+        <ol class="carousel_bottom__viewport">
+          <li id="carousel_bottom__slide1"
             tabindex="0"
-            class="carousel__slide">
-            <div class="carousel__snapper"
+            class="carousel_bottom__slide">
+            <div class="carousel_bottom__snapper"
             >
 
             </div>
           </li>
-          <li id="carousel__slide2"
+          <li id="carousel_bottom__slide2"
             tabindex="0"
-            class="carousel__slide">
-            <div class="carousel__snapper"></div>
-            <a href="#carousel__slide1"
-              class="carousel__prev"> </a>
-            <a href="#carousel__slide3"
-              class="carousel__next"> </a>
+            class="carousel_bottom__slide">
+            <div class="carousel_bottom__snapper"></div>
+            <a href="#carousel_bottom__slide1"
+              class="carousel_bottom__prev"> </a>
+            <a href="#carousel_bottom__slide3"
+              class="carousel_bottom__next"> </a>
           </li>
-          <li id="carousel__slide3"
+          <li id="carousel_bottom__slide3"
             tabindex="0"
-            class="carousel__slide"
+            class="carousel_bottom__slide"
           >
-            <div class="carousel__snapper"></div>
-            <a href="#carousel__slide2"
-              class="carousel__prev"> </a>
-            <a href="#carousel__slide4"
-              class="carousel__next"> </a>
+            <div class="carousel_bottom__snapper"></div>
+            <a href="#carousel_bottom__slide2"
+              class="carousel_bottom__prev"> </a>
+            <a href="#carousel_bottom__slide4"
+              class="carousel_bottom__next"> </a>
           </li>
-          <li id="carousel__slide4"
+          <li id="carousel_bottom__slide4"
             tabindex="0"
-            class="carousel__slide">
-            <div class="carousel__snapper"></div>
-            <a href="#carousel__slide3"
-              class="carousel__prev"> </a>
-            <a href="#carousel__slide1"
-              class="carousel__next">Go to first slide</a>
+            class="carousel_bottom__slide">
+            <div class="carousel_bottom__snapper"></div>
+            <a href="#carousel_bottom__slide3"
+              class="carousel_bottom__prev"> </a>
+            <a href="#carousel_bottom__slide1"
+              class="carousel_bottom__next"></a>
           </li>
         </ol>
       </section>
@@ -79,6 +79,7 @@ const Footer = () => {
           />
         </div>
       </div>
+      
     </div>
   );
 };

@@ -1597,18 +1597,16 @@ li {
   padding: 0;
 }
 
-.carousel {
-  position: center;
+.carousel_bottom {
+  position:center;
+  padding-top: 20%;
+  width: 90%;
+  perspective: 100px;
+  margin: auto;
+  margin-top: 10px;
 }
-.carousel-root{
-  min-width: 100%;
-  width: auto;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  display: inline-block;
-}
-.carousel__viewport {
+
+.carousel_bottom__viewport {
   position: absolute;
   top: 0;
   right: 0;
@@ -1621,39 +1619,39 @@ li {
   scroll-snap-type: x mandatory;
 }
 
-.carousel__slide {
-  position: relative;
+.carousel_bottom__slide {
+  position:relative;
   flex: 0 0 100%;
   width: 100%;
   counter-increment: item;
 }
 
-.carousel__slide:nth-child(1) {
+.carousel_bottom__slide:nth-child(1) {
   background-color: #000000;
   background-image: url('https://m.media-amazon.com/images/I/61A8fR8doxL._SX3000_.jpg');
-  background-size: cover;
+  background-size: contain;
 
 }
 
-.carousel__slide:nth-child(2) {
+.carousel_bottom__slide:nth-child(2) {
   background-color: #000000;
   background-size: cover;
   background-image: url('https://t3.ftcdn.net/jpg/02/74/05/62/240_F_274056256_3I7cvSpoxRzMmnHVgeXZ8zLt58wN75Y0.jpg');
 }
 
-.carousel__slide:nth-child(3) {
+.carousel_bottom__slide:nth-child(3) {
   background-image: url('http://3.bp.blogspot.com/-2cb7Ef__n70/ViRnBvIXRYI/AAAAAAAAAFY/WAyWXaoB-7U/s1600/Running.jpg');
   background-color: #000000;
   background-size: cover;
 }
 
-.carousel__slide:nth-child(4) {
+.carousel_bottom__slide:nth-child(4) {
   background-image: url('https://t3.ftcdn.net/jpg/02/78/68/36/240_F_278683646_XmlURVR2Zhjc7hEJ8fIGL38jZSqYBXVY.jpg');
   background-color: #000000;
   background-size: cover;
 }
 
-.carousel__snapper {
+.carousel_bottom__snapper {
   position: absolute;
 
   width: 100%;
@@ -1663,20 +1661,20 @@ li {
 }
 
 @media (hover: hover) {
-  .carousel__snapper {
+  .carousel_bottom__snapper {
     animation-name: tonext, snap;
     animation-timing-function: ease-in-out;
-    animation-duration: 6s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
   }
 
-  .carousel__slide:last-child .carousel__snapper {
+  .carousel_bottom__slide:last-child .carousel_bottom__snapper {
     animation-name: tostart, snap;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .carousel__snapper {
+  .carousel_bottom__snapper {
     animation-name: none;
   }
 }
