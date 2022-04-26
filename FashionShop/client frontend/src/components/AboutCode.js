@@ -12,7 +12,7 @@ const AboutCode = () => {
         <tr>
           <td>
             <div>
-              <h2>Aisha John</h2>
+              <h2>Aisha Bah</h2>
               <p >Project Manager</p>
               <img
                 alt="Aisha Bah"
