@@ -18,7 +18,8 @@ const AboutCode = () => {
                 alt="Aisha Bah"
                 src="https://media-exp1.licdn.com/dms/image/C4E03AQGrbmI_J1ZPYA/profile-displayphoto-shrink_800_800/0/1636964941831?e=1656547200&v=beta&t=EIeW8GGybMjsKpZn7CAAM1pjMW8X3tSyt7c63FhyNxk"
               />
-              <p>Project Manager, scheduling, meeting agenda, milstones development and deadlines, beta testing, project report and presenation.</p>
+              <p>Project Manager, scheduling, meeting agenda, milstones development and deadlines,</p>
+              <p>beta testing, project report and presenation.</p>
               <p>aisha.bah@utsa.edu</p>
               <a href="https://www.linkedin.com/in/aisha-m-bah/"> 
               <p><button class="neon-button3">Contact</button></p>
