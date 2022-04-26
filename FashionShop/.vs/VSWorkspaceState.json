@@ -3,7 +3,8 @@
     "",
     "\\client frontend",
     "\\client frontend\\src",
-    "\\client frontend\\src\\screens",
+    "\\client frontend\\src\\components",
+    "\\client frontend\\src\\components\\homeComponents",
     "\\dashboard",
     "\\dashboard\\src",
     "\\dashboard\\src\\components",
@@ -11,6 +12,6 @@
     "\\server",
     "\\server\\Routes"
   ],
-  "SelectedNode": "\\client frontend\\src\\screens\\CartScreen.js",
+  "SelectedNode": "\\client frontend\\src\\components\\homeComponents\\ContactInfo.js",
   "PreviewInSolutionExplorer": false
 }

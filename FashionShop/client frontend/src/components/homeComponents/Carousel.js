@@ -117,11 +117,13 @@ const Carousel = (props) => {
                     </button>
                     <div className="slider">
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather1_nnxkw7.jpg" alt="placehold" />
-                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather2_tegvre.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650952099/asdas_nirpjr.avif" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650951797/asda_yjcpba.avif" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather4_cpzavl.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650951181/sdasda_moyqzr.jpg" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865599/heather3_urdphj.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650951861/ert_xeqeig.avif" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather6_bilirl.jpg" alt="placehold" />
-                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather5_evmunf.jpg" alt="placehold" />
                     </div>
                     <button className="handleBar right-handle">
                         <div className="textHandleBar">&#8250;</div>
