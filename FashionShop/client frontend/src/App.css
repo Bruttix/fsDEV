@@ -1684,6 +1684,7 @@ li {
 .aboutme{
   background-color: none;
   font-size: 30px;
+  margin-top: 50px;
 }
 
 .aboutme h1{
@@ -1692,32 +1693,67 @@ li {
   margin-bottom: 1%;
   font-size: 150px;
 }
-.aboutme h2{
-  font-size: 60px;
+.aboutme .team {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
 }
-.aboutme img{
+
+.aboutme .team .member {
+  width: 25%;
+  margin: 10px;
+  background:  rgba(74, 7, 112, 0.473);
+  border-radius: 35px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  padding: 25px;
+}
+
+.aboutme .team .member h3{
+  font-size: 60px;
+  color: #77fcfe;
+}
+.aboutme .team .member img{
   border-radius: 50%;
   height: 200px;
   width: 200px;
 }
 
-.aboutme table{
-  text-align: center;
-  margin: auto;
-  border-collapse: separate;
-  border-spacing: 10px;
-  *border-collapse: expression('separate', cellSpacing='10px')
-}
-.aboutme  tr td{
-  margin: 50px;
-  margin: 12px 12px 12px 12px;
-  padding: 12px 12px 12px 12px;
+.aboutme .team .member span {
+  font-size: 40px;
+  color: #999;
 }
 
-body {
-  margin: 0;
+.aboutme .team .member p {
+  margin: 15px 0;
+  font-weight: 400;
+  color: #999;
+  font-size: 30px;
+  text-align: center;
 }
+
+.aboutme .team .member .btn a {
+  background: none;
+  display: block;
+  float: right;
+  width: 125px;
+  margin: 0 10px;
+  padding: 10px;
+
+  color: #444;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.aboutme .team .member .btn a:hover {
+  background: #85019607;
+}
+
+
 
  html {
   box-sizing: border-box;
 }
+
+/***************************************************/
