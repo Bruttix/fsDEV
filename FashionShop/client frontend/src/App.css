@@ -1628,7 +1628,7 @@ li {
 
 .carousel_bottom__slide:nth-child(1) {
   background-color: #000000;
-  background-image: url('https://m.media-amazon.com/images/I/61A8fR8doxL._SX3000_.jpg');
+  background-image: url('./components/profileComponents/carouselBottomImg/code1.png');
   background-size: contain;
 
 }
@@ -1636,17 +1636,17 @@ li {
 .carousel_bottom__slide:nth-child(2) {
   background-color: #000000;
   background-size: cover;
-  background-image: url('https://t3.ftcdn.net/jpg/02/74/05/62/240_F_274056256_3I7cvSpoxRzMmnHVgeXZ8zLt58wN75Y0.jpg');
+  background-image: url('./components/profileComponents/carouselBottomImg/code2.png');
 }
 
 .carousel_bottom__slide:nth-child(3) {
-  background-image: url('http://3.bp.blogspot.com/-2cb7Ef__n70/ViRnBvIXRYI/AAAAAAAAAFY/WAyWXaoB-7U/s1600/Running.jpg');
+  background-image: url('./components/profileComponents/carouselBottomImg/code3.png');
   background-color: #000000;
   background-size: cover;
 }
 
 .carousel_bottom__slide:nth-child(4) {
-  background-image: url('https://t3.ftcdn.net/jpg/02/78/68/36/240_F_278683646_XmlURVR2Zhjc7hEJ8fIGL38jZSqYBXVY.jpg');
+  background-image: url('./components/profileComponents/carouselBottomImg/code4.png');
   background-color: #000000;
   background-size: cover;
 }
@@ -1664,7 +1664,7 @@ li {
   .carousel_bottom__snapper {
     animation-name: tonext, snap;
     animation-timing-function: ease-in-out;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
   }
 
