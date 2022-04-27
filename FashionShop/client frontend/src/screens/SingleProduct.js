@@ -80,9 +80,6 @@ const SingleProduct = ({ history, match }) => {
                 <div className="container">
                   <img className="img_productSingle" src={product.image} alt={product.name} />
                 </div>
-                
-                  
-                
               </div>
               <div className="col-md-6">
                 <div className="product-dtl">
@@ -90,7 +87,6 @@ const SingleProduct = ({ history, match }) => {
                     <div className="product-name">{product.name}</div>
                   </div>
                   <p>{product.description}</p>
-
                   <div className="product-count col-lg-7 ">
                     <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Price</h6>
@@ -133,37 +129,27 @@ const SingleProduct = ({ history, match }) => {
                         <>
                          <div className="flex-box d-flex justify-content-between align-items-center">
                           <h6>Size</h6>
-                          <select
-                            value={sizeChosen}
-                            onChange={(e) => setSizeChosen(e.target.value)}
-                          >
+                          <select value={sizeChosen} onChange={(e) => setSizeChosen(e.target.value)}>
                             {product.sizeInStockXS > 0 ? (
                                 <option key='XS' value={0}> 0 &#8212; X-Small </option>
-                            ) : (
-                                console.log('size option XS out of stock')
+                            ) : (console.log('size option XS out of stock')
                             )}
                             {product.sizeInStockS > 0 ? (
                                 <option key={1} value={1}> 1 &#8212; Small </option>
-                            ) : (
-                                console.log('size option S out of stock')
+                            ) : (console.log('size option S out of stock')
                             )}
                             {product.sizeInStockM > 0 ? (
                                 <option key={2} value={2}> 2 &#8212; Medium </option>
-                            ) : (
-                                console.log('size option M out of stock')
+                            ) : (console.log('size option M out of stock')
                             )}
                             {product.sizeInStockL > 0 ? (
                                 <option key={3} value={3}> 3 &#8212; Large </option>
-                            ) : (
-                               console.log('size option L out of stock')
+                            ) : (console.log('size option L out of stock')
                             )}
                             {product.sizeInStockXL > 0 ? (
                                 <option key={4} value={4}> 4 &#8212; X-Large </option>
-                            ) : (
-                                console.log('size option XL out of stock')
+                            ) : (console.log('size option XL out of stock')
                             )}
-                                
-                             
                           </select>
                          </div>
                         </>
@@ -264,5 +250,4 @@ const SingleProduct = ({ history, match }) => {
     </>
   );
 };
-
-export default SingleProduct;
+export default SingleProduct; 
