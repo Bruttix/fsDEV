@@ -130,11 +130,39 @@ const Header = () => {
               <nav id="navbar" className="col-md-6 col-8 d-flex align-items-center">
                 <div class="nav-wrapper">
                   <ul id="menu">
-                   <li><a href="/GirlsScreen">Girls</a></li>
-                   <li><a href="/GuysScreen">Guys</a></li>
-                   <li><a href="/Accessories">Accessories</a></li>
-                   <li><a href="/About">About</a></li>
-                   <li><a href="/Custom">Custom</a></li>
+                    <li><a href="/Custom">Custom</a></li>
+                    <div className="dropdown">
+                       <li><a className="dropbtn" href="/GirlsScreen">Girls</a></li>
+                          <div class="dropdown-content">
+                            <a href="/GirlsScreen">Shirts</a>
+                            <a href="/GirlsScreen">Shorts</a>
+                            <a href="/GirlsScreen">Trousers</a>
+                            <a href="/GirlsScreen">Jackets</a>
+                            <a href="/GirlsScreen">Headwear</a>
+                            <a href="/GirlsScreen">Accessories</a>
+                          </div>
+                    </div>
+                    <div className="dropdown2">
+                       <li><a className="dropbtn2" href="/GuysScreen">Guys</a></li>
+                          <div class="dropdown-content2">
+                            <a href="/GuysScreen">Shirts</a>
+                            <a href="/GuysScreen">Shorts</a>
+                            <a href="/GuysScreen">Trousers</a>
+                            <a href="/GuysScreen">Jackets</a>
+                            <a href="/GuysScreen">Headwear</a>
+                            <a href="/GuysScreen">Accessories</a>
+                          </div>
+                    </div>
+                    <div className="dropdown3">
+                       <li><a className="dropbtn3" href="/Accessories">Accessories</a></li>
+                          <div class="dropdown-content3">
+                            <a href="/Accessories">Bags</a>
+                            <a href="/Accessories">Jewelry</a>
+                            <a href="/Accessories">Backpacks</a>
+                            <a href="/Accessories">Underwear</a>
+                          </div>
+                    </div>
+                    <li><a href="/About">About</a></li>
                   </ul>
                </div>
               </nav>

@@ -24,7 +24,6 @@ const PlaceOrderScreen = ({ history }) => {
   const shippingTaxPrice = (num) => {
     return (num + 15).toFixed(2);
     };
-  const sizeChosen = cart.sizeChosen;
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );

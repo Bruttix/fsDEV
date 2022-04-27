@@ -3,8 +3,7 @@
     "",
     "\\client frontend",
     "\\client frontend\\src",
-    "\\client frontend\\src\\components",
-    "\\client frontend\\src\\components\\homeComponents",
+    "\\client frontend\\src\\screens",
     "\\dashboard",
     "\\dashboard\\src",
     "\\dashboard\\src\\components",
@@ -12,6 +11,6 @@
     "\\server",
     "\\server\\Routes"
   ],
-  "SelectedNode": "\\client frontend\\src\\components\\homeComponents\\ContactInfo.js",
+  "SelectedNode": "\\client frontend\\src\\App.css",
   "PreviewInSolutionExplorer": false
 }

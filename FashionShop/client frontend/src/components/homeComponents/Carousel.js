@@ -30,7 +30,7 @@ const Carousel = (props) => {
             let sliderIndex = parseInt(
                 getComputedStyle(slider).getPropertyValue("--slider-index")
             );
-            const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen);
+            const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen - 2);
 
             if (sliderIndex >= progressBarItemCount) {
                 slider.style.setProperty("--slider-index", progressBarItemCount - 1);
@@ -108,7 +108,7 @@ const Carousel = (props) => {
         window.addEventListener("DOMContentLoaded", runWhenPageIsFullyParsed);
     }
     return (
-
+       <body>
         <div className="rowCarousel">
                 <script src="Carousel.js"></script>
                 <div className="containerCarousel">
@@ -116,12 +116,14 @@ const Carousel = (props) => {
                         <div className="textHandleBar">&#8249;</div>
                     </button>
                     <div className="slider">
-                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather1_nnxkw7.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651029484/heather1_formatted_zc0vfq.jpg" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650952099/asdas_nirpjr.avif" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650951797/asda_yjcpba.avif" alt="placehold" />
-                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather4_cpzavl.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651030020/heather4_formatted_dmzdxm.webp" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650951181/sdasda_moyqzr.jpg" alt="placehold" />
-                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865599/heather3_urdphj.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651029755/heather3_formatted_dek3eu.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651056928/retro1_jews0i.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651029868/h3_formatted_zoinjw.webp" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650951861/ert_xeqeig.avif" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather6_bilirl.jpg" alt="placehold" />
                     </div>
@@ -134,7 +136,8 @@ const Carousel = (props) => {
                     <h3 className="title">Featured</h3>
                     <div className="progress-bar"></div>
                 </div>
-            </div>
+         </div>
+        </body>
         )
 };
 

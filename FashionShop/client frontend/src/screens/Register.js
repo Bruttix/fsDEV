@@ -11,6 +11,7 @@ const Register = ({ location, history }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordCheck, setPasswordCheck] = useState("");
 
   const dispatch = useDispatch();
   const redirect = location.search ? location.search.split("=")[1] : "/";
@@ -25,8 +26,15 @@ const Register = ({ location, history }) => {
   }, [userInfo, history, redirect]);
 
   const submitHandler = (e) => {
-    e.preventDefault();
-    dispatch(register(name, email, password));
+      if (password === passwordCheck) {
+          e.preventDefault();
+          dispatch(register(name, email, password));
+      }
+      else {
+          e.preventDefault();
+          alert('Enter matching passwords');
+          return;
+      }
   };
 
   return (
@@ -57,6 +65,13 @@ const Register = ({ location, history }) => {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            defaultValue={passwordCheck}
+            value={passwordCheck}
+            onChange={(e) => setPasswordCheck(e.target.value)}
           />
 
           <button className="neon-button2" type="submit">Register</button>
