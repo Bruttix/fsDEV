@@ -52,7 +52,7 @@ const AboutCode = () => {
       <span>Frontend</span>
       <hr></hr>
       <span>jasmansidhu33@gmail.com</span>
-      <p>Assisted with project report and presentation.</p>
+      <p>Assisted with frontend, project report, and presentation.</p>
       <div class="btn">
         <a href="https://www.linkedin.com/in/jasman-sidhu/"><p><button class="neon-button3">Contact</button></p></a>
       </div>
