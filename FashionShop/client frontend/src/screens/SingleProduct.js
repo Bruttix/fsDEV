@@ -15,8 +15,8 @@ import moment from "moment";
 import ImageGalleryComponent from '../components/homeComponents/image-gallery.component';
 
 const SingleProduct = ({ history, match }) => {
-  const [qty, setQty] = useState([]);
-  const [sizeChosen, setSizeChosen] = useState([]);
+  const [qty, setQty] = useState(1);
+  const [sizeChosen, setSizeChosen] = useState(0);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
 

@@ -26,8 +26,10 @@ const Login = ({ history }) => {
     dispatch(login(email, password));
   };
   return (
-    <>
+      <>
+
       <Toast />
+      
       <div className="signInCard mx-auto">
        <div className="signInBox">
         <div className="card-body">
