@@ -117,12 +117,12 @@ const Carousel = (props) => {
                     </button>
                     <div className="slider">
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651029484/heather1_formatted_zc0vfq.jpg" alt="placehold" />
-                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650952099/asdas_nirpjr.avif" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dowby0j6c/image/upload/v1651197056/Group_tqaonn.png" alt="placehold" />
                         <img src="https://res.cloudinary.com/the-university-of-texas-at-san-antonio/image/upload/v1651196411/Screenshot_2022-04-28_203910_wwtvoy.png" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651030020/heather4_formatted_dmzdxm.webp" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650951181/sdasda_moyqzr.jpg" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651029755/heather3_formatted_dek3eu.jpg" alt="placehold" />
-                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651056928/retro1_jews0i.jpg" alt="placehold" />
+                        <img src="https://res.cloudinary.com/dowby0j6c/image/upload/v1651197162/Picture_1_-_Aisha_rjraay.jpg" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651029868/h3_formatted_zoinjw.webp" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650951861/ert_xeqeig.avif" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650865598/heather6_bilirl.jpg" alt="placehold" />
