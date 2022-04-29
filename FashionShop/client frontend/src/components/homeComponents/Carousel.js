@@ -118,7 +118,7 @@ const Carousel = (props) => {
                     <div className="slider">
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651029484/heather1_formatted_zc0vfq.jpg" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650952099/asdas_nirpjr.avif" alt="placehold" />
-                        <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650951797/asda_yjcpba.avif" alt="placehold" />
+                        <img src="https://res.cloudinary.com/the-university-of-texas-at-san-antonio/image/upload/v1651196411/Screenshot_2022-04-28_203910_wwtvoy.png" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651030020/heather4_formatted_dmzdxm.webp" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1650951181/sdasda_moyqzr.jpg" alt="placehold" />
                         <img src="https://res.cloudinary.com/dqbkfteqj/image/upload/v1651029755/heather3_formatted_dek3eu.jpg" alt="placehold" />
