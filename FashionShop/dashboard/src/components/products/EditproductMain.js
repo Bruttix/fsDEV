@@ -261,7 +261,6 @@ const EditProductMain = (props) => {
                           className="form-control"
                           type="text"
                           value={imageOne}
-                          required
                           onChange={(e) => setImageOne(e.target.value)}
                         />
                       </div> 
@@ -271,7 +270,6 @@ const EditProductMain = (props) => {
                           className="form-control"
                           type="text"
                           value={imageTwo}
-                          required
                           onChange={(e) => setImageTwo(e.target.value)}
                         />
                       </div> 
@@ -281,7 +279,6 @@ const EditProductMain = (props) => {
                           className="form-control"
                           type="text"
                           value={imageThree}
-                          required
                           onChange={(e) => setImageThree(e.target.value)}
                         />
                       </div> 
@@ -291,7 +288,6 @@ const EditProductMain = (props) => {
                           className="form-control"
                           type="text"
                           value={imageFour}
-                          required
                           onChange={(e) => setImageFour(e.target.value)}
                         />
                       </div> 
@@ -301,7 +297,6 @@ const EditProductMain = (props) => {
                           className="form-control"
                           type="text"
                           value={imageFive}
-                          required
                           onChange={(e) => setImageFive(e.target.value)}
                         />
                       </div>

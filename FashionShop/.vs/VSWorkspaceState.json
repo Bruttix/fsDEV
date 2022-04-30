@@ -3,8 +3,11 @@
     "",
     "\\client frontend",
     "\\client frontend\\src",
+    "\\client frontend\\src\\components\\homeComponents",
     "\\client frontend\\src\\screens",
-    "\\dashboard",
+    "\\dashboard\\src",
+    "\\dashboard\\src\\components",
+    "\\dashboard\\src\\components\\products",
     "\\dashboard\\src\\screens"
   ],
   "SelectedNode": "\\client frontend\\src\\screens\\SingleProduct.js",

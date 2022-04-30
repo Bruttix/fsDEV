@@ -156,7 +156,7 @@ productRoute.put(
   protect,
   admin,
   asyncHandler(async (req, res) => {
-      const { name, price, description, image, imageOne, countInStock, sizeInStockXS,
+      const { name, price, description, image, imageOne, imageTwo, imageThree, imageFour, imageFive, countInStock, sizeInStockXS,
           sizeInStockS,
           sizeInStockM,
           sizeInStockL,
