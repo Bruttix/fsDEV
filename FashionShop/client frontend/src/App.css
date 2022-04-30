@@ -208,6 +208,10 @@ img{
   font-size: 2.00em;
   transition: all 0.3s ease-in-out;
 }
+.img_showcaseProduct{
+  align-items: start;
+  width: 100%;
+}
 .img_productSingle {
     padding-top: 50px;
     transform-origin: center;
@@ -216,6 +220,7 @@ img{
     min-height: contain;
     max-height: auto;
     transition: 0.5s;
+    align-items: start;
 }
 .img_productSingle:hover {
     color: #77fcfe;
@@ -224,7 +229,7 @@ img{
 }
 .singleProductCarousel {
     height: contain;
-    max-height: 600px;
+    max-height: contain;
     height: contain;
     width: contain;
     max-width: 1000px;

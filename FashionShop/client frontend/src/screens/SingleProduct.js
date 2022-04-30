@@ -77,9 +77,7 @@ const SingleProduct = ({ history, match }) => {
           <>
             <div className="row">
               <div className="col-md-6">
-                <div className="container">
-                  <img className="img_productSingle" src={product.image} alt={product.name} />
-                </div>
+                 <img className="img_showcaseProduct" src={product.image} alt={product.name} />
               </div>
               <div className="col-md-6">
                 <div className="product-dtl">
@@ -165,7 +163,11 @@ const SingleProduct = ({ history, match }) => {
             </div>
             <br/>
             <div>                          
-               <ImageGalleryComponent/>
+               <ImageGalleryComponent imageOnes={product.imageOne}   
+                                      imageTwos={product.imageTwo} 
+                                      imageThrees={product.imageThree} 
+                                      imageFours={product.imageFour} 
+                                      imageFives={product.imageFive} />
             </div>
             {/* RATING */}
             <div className="row my-5">

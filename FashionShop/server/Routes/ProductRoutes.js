@@ -114,7 +114,8 @@ productRoute.post(
   protect,
   admin,
   asyncHandler(async (req, res) => {
-      const { name, price, description, image, countInStock, sizeInStockXS,
+      const { name, price, description, image, imageOne, imageTwo, imageThree, imageFour, imageFive,
+          countInStock, sizeInStockXS,
           sizeInStockS,
           sizeInStockM,
           sizeInStockL,
@@ -128,7 +129,7 @@ productRoute.post(
         name,
         price,
         description,
-        image,
+        image, imageOne,imageTwo, imageThree, imageFour, imageFive,
         countInStock,
         sizeInStockXS,
         sizeInStockS,
@@ -155,7 +156,7 @@ productRoute.put(
   protect,
   admin,
   asyncHandler(async (req, res) => {
-      const { name, price, description, image, countInStock, sizeInStockXS,
+      const { name, price, description, image, imageOne, countInStock, sizeInStockXS,
           sizeInStockS,
           sizeInStockM,
           sizeInStockL,
@@ -166,6 +167,11 @@ productRoute.put(
       product.price = price || product.price;
       product.description = description || product.description;
       product.image = image || product.image;
+      product.imageOne = imageOne || product.imageOne;
+      product.imageTwo = imageTwo || product.imageTwo;
+      product.imageThree = imageThree || product.imageThree;
+      product.imageFour = imageFour || product.imageFour;
+      product.imageFive = imageFive || product.imageFive;
       product.countInStock = countInStock || product.countInStock;
       product.sizeInStockXS = sizeInStockXS || product.sizeInStockXS;
       product.sizeInStockS = sizeInStockS || product.sizeInStockS;

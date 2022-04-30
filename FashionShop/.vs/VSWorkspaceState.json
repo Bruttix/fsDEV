@@ -1,14 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\client frontend",
+    "\\client frontend\\src",
+    "\\client frontend\\src\\screens",
     "\\dashboard",
-    "\\dashboard\\src",
-    "\\dashboard\\src\\components",
-    "\\dashboard\\src\\components\\Home",
-    "\\dashboard\\src\\Redux",
-    "\\dashboard\\src\\Redux\\Actions",
-    "\\dashboard\\src\\Redux\\Constants"
+    "\\dashboard\\src\\screens"
   ],
-  "SelectedNode": "\\dashboard\\src\\components\\Home\\SalesStatistics.js",
+  "SelectedNode": "\\client frontend\\src\\screens\\SingleProduct.js",
   "PreviewInSolutionExplorer": false
 }

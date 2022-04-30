@@ -19,7 +19,7 @@ const Product = (props) => {
         <div className="card">
           <Link to="#" className="imgBx">
             <img src={product.image} alt="Product" />
-          </Link>
+          </Link>  
           <div className="contentBx">
             <Link to="#" className="title text-truncate">
               {product.name}

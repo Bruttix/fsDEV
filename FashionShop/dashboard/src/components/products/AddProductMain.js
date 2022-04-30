@@ -18,6 +18,11 @@ const AddProductMain = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [image, setImage] = useState("");
+  const [imageOne, setImageOne] = useState("");
+  const [imageTwo, setImageTwo] = useState("");
+  const [imageThree, setImageThree] = useState("");
+  const [imageFour, setImageFour] = useState("");
+  const [imageFive, setImageFive] = useState("");
   const [countInStock, setCountInStock] = useState(0);
   const [sizeChosen, setSizeChosen] = useState(0);
   const [sizeInStockXS, setSizeInStockXS] = useState(0);
@@ -39,6 +44,11 @@ const AddProductMain = () => {
       setDescription("");
       setCountInStock(0);
       setImage("");
+      setImageOne("");
+      setImageTwo("");
+      setImageThree("");
+      setImageFour("");
+      setImageFive("");
       setPrice(0);
       setSizeInStockXS(0);
       setSizeInStockS(0);
@@ -51,7 +61,7 @@ const AddProductMain = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(createProduct(name, price, description, image, countInStock,sizeChosen, sizeInStockXS, sizeInStockS, sizeInStockM, sizeInStockL, sizeInStockXL));
+    dispatch(createProduct(name, price, description, image, imageOne, imageTwo, imageThree, imageFour, imageFive, countInStock,sizeChosen, sizeInStockXS, sizeInStockS, sizeInStockM, sizeInStockL, sizeInStockXL));
   };
 
   return (
@@ -201,7 +211,7 @@ const AddProductMain = () => {
                     ></textarea>
                   </div>
                   <div className="mb-4">
-                    <label className="form-label">Images</label>
+                    <label className="form-label">Main Image</label>
                     <input
                       className="form-control"
                       type="text"
@@ -210,7 +220,61 @@ const AddProductMain = () => {
                       required
                       onChange={(e) => setImage(e.target.value)}
                     />
-                    <input className="form-control mt-3" type="file" />
+                  </div> 
+                  <div className="mb-4">
+                    <label className="form-label">Supporting Images 1</label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      placeholder="Enter Image URL"
+                      value={imageOne}
+                      required
+                      onChange={(e) => setImageOne(e.target.value)}
+                    />
+                  </div> 
+                  <div className="mb-4">
+                    <label className="form-label">Supporting Images 2</label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      placeholder="Enter Image URL"
+                      value={imageTwo}
+                      required
+                      onChange={(e) => setImageTwo(e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="form-label">Supporting Images 3</label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      placeholder="Enter Image URL"
+                      value={imageThree}
+                      required
+                      onChange={(e) => setImageThree(e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="form-label">Supporting Images 4</label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      placeholder="Enter Image URL"
+                      value={imageFour}
+                      required
+                      onChange={(e) => setImageFour(e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="form-label">Supporting Images 5</label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      placeholder="Enter Image URL"
+                      value={imageFive}
+                      required
+                      onChange={(e) => setImageFive(e.target.value)}
+                    />
                   </div>
                 </div>
               </div>

@@ -24,6 +24,11 @@ const EditProductMain = (props) => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [image, setImage] = useState("");
+  const [imageOne, setImageOne] = useState("");
+  const [imageTwo, setImageTwo] = useState("");
+  const [imageThree, setImageThree] = useState("");
+  const [imageFour, setImageFour] = useState("");
+  const [imageFive, setImageFive] = useState("");
   const [countInStock, setCountInStock] = useState(0);
   const [sizeInStockXS, setSizeInStockXS] = useState(0);
   const [sizeInStockS, setSizeInStockS] = useState(0);
@@ -61,6 +66,11 @@ const EditProductMain = (props) => {
         setSizeInStockL(product.sizeInStockL);
         setSizeInStockXL(product.sizeInStockXL);
         setImage(product.image);
+        setImageOne(product.imageOne);
+        setImageTwo(product.imageTwo);
+        setImageThree(product.imageThree);
+        setImageFour(product.imageFour);
+        setImageFive(product.imageFive);
         setPrice(product.price);
       }
     }
@@ -74,7 +84,7 @@ const EditProductMain = (props) => {
         name,
         price,
         description,
-        image,
+        image, imageOne, imageTwo, imageThree, imageFour, imageFive,
         countInStock,
         sizeInStockXS,sizeInStockS,sizeInStockM,sizeInStockL,sizeInStockXL,
       })
@@ -236,13 +246,63 @@ const EditProductMain = (props) => {
                         ></textarea>
                       </div>
                       <div className="mb-4">
-                        <label className="form-label">Images</label>
+                        <label className="form-label">Feat. Image</label>
                         <input
                           className="form-control"
                           type="text"
                           value={image}
                           required
                           onChange={(e) => setImage(e.target.value)}
+                        />
+                      </div>   
+                      <div className="mb-4">
+                        <label className="form-label">Extra Images 1</label>
+                        <input
+                          className="form-control"
+                          type="text"
+                          value={imageOne}
+                          required
+                          onChange={(e) => setImageOne(e.target.value)}
+                        />
+                      </div> 
+                      <div className="mb-4">
+                        <label className="form-label">Extra Images 2</label>
+                        <input
+                          className="form-control"
+                          type="text"
+                          value={imageTwo}
+                          required
+                          onChange={(e) => setImageTwo(e.target.value)}
+                        />
+                      </div> 
+                      <div className="mb-4">
+                        <label className="form-label">Extra Images 3</label>
+                        <input
+                          className="form-control"
+                          type="text"
+                          value={imageThree}
+                          required
+                          onChange={(e) => setImageThree(e.target.value)}
+                        />
+                      </div> 
+                      <div className="mb-4">
+                        <label className="form-label">Extra Images 4</label>
+                        <input
+                          className="form-control"
+                          type="text"
+                          value={imageFour}
+                          required
+                          onChange={(e) => setImageFour(e.target.value)}
+                        />
+                      </div> 
+                      <div className="mb-4">
+                        <label className="form-label">Extra Images 5</label>
+                        <input
+                          className="form-control"
+                          type="text"
+                          value={imageFive}
+                          required
+                          onChange={(e) => setImageFive(e.target.value)}
                         />
                       </div>
                     </>
