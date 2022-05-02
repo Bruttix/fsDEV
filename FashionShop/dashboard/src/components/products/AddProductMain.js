@@ -16,6 +16,8 @@ const ToastObjects = {
 };
 const AddProductMain = () => {
   const [name, setName] = useState("");
+  const [category, setCategory] = useState("");
+  const [piece, setPiece] = useState("");
   const [price, setPrice] = useState(0);
   const [image, setImage] = useState("");
   const [imageOne, setImageOne] = useState("");
@@ -41,6 +43,8 @@ const AddProductMain = () => {
       toast.success("Product Added", ToastObjects);
       dispatch({ type: PRODUCT_CREATE_RESET });
       setName("");
+      setCategory("");
+      setPiece("");
       setDescription("");
       setCountInStock(0);
       setImage("");
@@ -61,7 +65,7 @@ const AddProductMain = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(createProduct(name, price, description, image, imageOne, imageTwo, imageThree, imageFour, imageFive, countInStock,sizeChosen, sizeInStockXS, sizeInStockS, sizeInStockM, sizeInStockL, sizeInStockXL));
+    dispatch(createProduct(name, category, piece, price, description, image, imageOne, imageTwo, imageThree, imageFour, imageFive, countInStock,sizeChosen, sizeInStockXS, sizeInStockS, sizeInStockM, sizeInStockL, sizeInStockXL));
   };
 
   return (
@@ -100,6 +104,35 @@ const AddProductMain = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                     />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="product_category" className="form-label">
+                      Product Category
+                    </label>
+                   <select required type="text" id="product_category" className="form-control" value={category} onChange={(e) => setCategory(e.target.value)}>
+                        <option value="none" selected hidden>Select an Option</option>
+                        <option id="product_category" value="Girls">Girls</option>
+                        <option id="product_category" value="Guys">Guys</option>
+                        <option id="product_category" value="Accessories">Accessories</option>
+                        <option id="product_category" value="Custom">Custom</option>
+                    </select>
+                  </div>
+                  <div className="mb-4" >
+                    <label htmlFor="product_piece" className="form-label">
+                      Product Type
+                    </label>
+                    <select required type="text" id="product_piece" className="form-control" value={piece} onChange={(e) => setPiece(e.target.value)}>
+                         <option value="none" selected hidden>Select an Option</option>
+                         <option id="product_piece" value="Shirts">Shirt</option>
+                         <option  id="product_piece" value="Shorts">Shorts</option>
+                         <option  id="product_piece" value="Shoes">Shoes</option>
+                         <option id="product_piece" value="Trousers">Trousers</option>
+                         <option  id="product_piece" value="Jackets">Jackets</option>
+                         <option id="product_piece" value="Headwear">Headwear</option>
+                         <option  id="product_piece" value="Bags">Bags</option>
+                         <option id="product_piece" value="Accessories">Accessories</option>
+                         <option  id="product_piece" value="Underwear">Underwear</option>
+                    </select>
                   </div>
                   <div className="mb-4">
                     <label htmlFor="product_price" className="form-label">

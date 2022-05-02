@@ -22,6 +22,8 @@ const EditProductMain = (props) => {
   const { productId } = props;
 
   const [name, setName] = useState("");
+  const [category, setCategory] = useState("");
+  const [piece, setPiece] = useState("");
   const [price, setPrice] = useState(0);
   const [image, setImage] = useState("");
   const [imageOne, setImageOne] = useState("");
@@ -58,6 +60,8 @@ const EditProductMain = (props) => {
         dispatch(editProduct(productId));
       } else {
         setName(product.name);
+        setCategory(product.category);
+        setPiece(product.piece);
         setDescription(product.description);
         setCountInStock(product.countInStock);
         setSizeInStockXS(product.sizeInStockXS);
@@ -81,7 +85,7 @@ const EditProductMain = (props) => {
     dispatch(
       updateProduct({
         _id: productId,
-        name,
+        name, category, piece,
         price,
         description,
         image, imageOne, imageTwo, imageThree, imageFour, imageFive,
@@ -136,6 +140,36 @@ const EditProductMain = (props) => {
                           onChange={(e) => setName(e.target.value)}
                         />
                       </div>
+                       <div className="mb-4">
+                            <label htmlFor="product_category" className="form-label">
+                              Product Category
+                            </label>
+                           <select required type="text" id="product_category" className="form-control" value={category} onChange={(e) => setCategory(e.target.value)}>
+                                <option value="none" selected hidden>Select an Option</option>
+                                <option id="product_category" value="Girls">Girls</option>
+                                <option id="product_category" value="Guys">Guys</option>
+                                <option id="product_category" value="Both">Both</option>
+                                <option id="product_category" value="Accessories">Accessories</option>
+                                <option id="product_category" value="Custom">Custom</option>
+                            </select>
+                       </div>
+                          <div className="mb-4" >
+                            <label htmlFor="product_piece" className="form-label">
+                              Product Type
+                            </label>
+                            <select required type="text" id="product_piece" className="form-control" value={piece} onChange={(e) => setPiece(e.target.value)}>
+                                <option value="none" selected hidden>Select an Option</option>
+                                <option id="product_piece" value="Shirts">Shirt</option>
+                                <option  id="product_piece" value="Shorts">Shorts</option>
+                                <option  id="product_piece" value="Shoes">Shoes</option>
+                                <option id="product_piece" value="Trousers">Trousers</option>
+                                <option  id="product_piece" value="Jackets">Jackets</option>
+                                <option id="product_piece" value="Headwear">Headwear</option>
+                                <option  id="product_piece" value="Bags">Bags</option>
+                                <option id="product_piece" value="Accessories">Accessories</option>
+                                <option  id="product_piece" value="Underwear">Underwear</option>
+                           </select>
+                         </div>
                       <div className="mb-4">
                         <label htmlFor="product_price" className="form-label">
                           Price

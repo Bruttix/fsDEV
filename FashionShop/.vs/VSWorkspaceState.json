@@ -1,15 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\client frontend",
-    "\\client frontend\\src",
-    "\\client frontend\\src\\components\\homeComponents",
     "\\client frontend\\src\\screens",
+    "\\dashboard",
     "\\dashboard\\src",
     "\\dashboard\\src\\components",
     "\\dashboard\\src\\components\\products",
-    "\\dashboard\\src\\screens"
+    "\\dashboard\\src\\screens",
+    "\\server\\Routes"
   ],
-  "SelectedNode": "\\client frontend\\src\\screens\\SingleProduct.js",
+  "SelectedNode": "\\dashboard\\src\\components\\products\\EditproductMain.js",
   "PreviewInSolutionExplorer": false
 }

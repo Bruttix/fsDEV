@@ -114,7 +114,7 @@ productRoute.post(
   protect,
   admin,
   asyncHandler(async (req, res) => {
-      const { name, price, description, image, imageOne, imageTwo, imageThree, imageFour, imageFive,
+      const { name, category, piece, price, description, image, imageOne, imageTwo, imageThree, imageFour, imageFive,
           countInStock, sizeInStockXS,
           sizeInStockS,
           sizeInStockM,
@@ -126,7 +126,7 @@ productRoute.post(
       throw new Error("Product name already exist");
     } else {
       const product = new Product({
-        name,
+        name, category, piece, 
         price,
         description,
         image, imageOne,imageTwo, imageThree, imageFour, imageFive,
@@ -156,7 +156,7 @@ productRoute.put(
   protect,
   admin,
   asyncHandler(async (req, res) => {
-      const { name, price, description, image, imageOne, imageTwo, imageThree, imageFour, imageFive, countInStock, sizeInStockXS,
+      const { name, category, piece,  price, description, image, imageOne, imageTwo, imageThree, imageFour, imageFive, countInStock, sizeInStockXS,
           sizeInStockS,
           sizeInStockM,
           sizeInStockL,
@@ -164,6 +164,8 @@ productRoute.put(
     const product = await Product.findById(req.params.id);
     if (product) {
       product.name = name || product.name;
+      product.category = category || product.category;
+      product.piece = piece || product.piece;
       product.price = price || product.price;
       product.description = description || product.description;
       product.image = image || product.image;
