@@ -38,7 +38,8 @@ const AboutCode = () => {
       <span>Frontend</span>
       <hr></hr>
       <span>jobs.cruzer@gmail.com</span>
-      <p>Created and assisted in stylizing elemenets. Assisted team members to set up respective environments. Created about page, bottom coupon carousel, product images, and carousel images. </p>
+      <p>Created and assisted in stylizing elemenets. Assisted team members to set up respective environments.
+         Created about page, bottom coupon carousel, product images, and carousel images. </p>
       <div  class="btn">
         <a href="https://www.linkedin.com/in/trei-cruz/" ><p><button class="neon-button3">Contact</button></p></a>
       </div>
@@ -52,14 +53,14 @@ const AboutCode = () => {
       <span>Frontend</span>
       <hr></hr>
       <span>jasmansidhu33@gmail.com</span>
-      <p>Assisted with frontend, project report, and presentation.</p>
+      <p>Assisted with project report and presentation.</p>
       <div class="btn">
         <a href="https://www.linkedin.com/in/jasman-sidhu/"><p><button class="neon-button3">Contact</button></p></a>
       </div>
     </div>
 
     <div class="member">
-<img  alt="kruPic" src = "https://tinyurl.com/2p8kdcem"/> 
+<img  alt="kruPic" src = "https://res.cloudinary.com/the-university-of-texas-at-san-antonio/image/upload/v1651530052/jacket/usernopic_ayrzpo.png"/> 
       <h3>Krupa Patel</h3>
       <span>Frontend</span>
       <hr></hr>
@@ -71,7 +72,7 @@ const AboutCode = () => {
     </div>
 
     <div class="member">
-      <img  alt="micPic" src="https://tinyurl.com/2p8kdcem" />
+      <img  alt="micPic" src="https://res.cloudinary.com/the-university-of-texas-at-san-antonio/image/upload/v1651530052/jacket/usernopic_ayrzpo.png" />
       <h3>Michael Maldonado</h3>
       <span>Backend</span>
       <hr></hr>
