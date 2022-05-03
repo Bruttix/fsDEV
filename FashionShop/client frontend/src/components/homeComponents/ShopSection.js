@@ -39,15 +39,12 @@ const ShopSection = (props) => {
                       >
                         <div className="border-product">
                           <Link to={`/products/${product._id}`}>
-                            
-                              <img class="img_product" src={product.image} alt={product.name} />
-                            
+                            <img class="img_product" src={product.image} alt={product.name} />
                           </Link>
-
                           <div className="shoptext">
                             <p>
                               <Link to={`/products/${product._id}`}>
-                                {product.name}
+                                {product.name} {product.category}
                               </Link>
                             </p>
 
