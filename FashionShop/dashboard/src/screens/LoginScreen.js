@@ -28,8 +28,10 @@ const Login = ({ history }) => {
   return (
       <>
 
-      <Toast />
-      
+          <Toast />
+          <div className="adLogo">
+              <img alt="logo" src="/images/logo.png" />
+          </div>
       <div className="signInCard mx-auto">
        <div className="signInBox">
         <div className="card-body">
