@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    zoom: 100%;
 }
 
 body, html {
     width: 100%;
     min-height: 100vh;
-    zoom: 70%;
+    zoom: 80%;
     margin: 0;
     padding: 0;
 }
@@ -59,7 +60,11 @@ body, html {
   .single-product {
     margin-top: 20px;
   }
+  .subscribe-section {
+        width: 100%;
+  }
 }
+
 @media (max-width: 768px) {
   .pc-header {
     display: none !important;
@@ -126,6 +131,15 @@ body, html {
   .order-detail {
     margin-top: 20px;
   }
+  .Announcement{
+      display: none !important;
+  }
+  .headerNavBar {
+      display: none !important;
+  }
+   body {
+    display: grid;
+  }
 }
 @media (max-width: 575.98px) {
   .subscribe-head .form-section input[type="email"] {
@@ -160,15 +174,30 @@ body, html {
     font-size: 17px;
     margin-top: 10px;
   }
+  .img_product{
+     margin-left: 250px;
+  }
   .center p {
     font-size: 17px;
+  }
+  .Announcement{
+      visibility: hidden;
+      display: none !important;
+  }
+   body {
+    display: grid;
   }
 }
 @media (max-width: 400px) {
   .subscribe-head h2 {
     font-size: 20px;
   }
-
+  body {
+    display: grid;
+  }
+  .Announcement{
+      visibility: hidden;
+  }
   .single-image,
   .single-image img {
     height: 200px;

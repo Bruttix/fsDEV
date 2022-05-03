@@ -3,13 +3,13 @@ import React from "react";
 const CalltoActionSection = () => {
 
     return (
-    <div className="subscribe-section bg-with-black">
+    <div className="subscribe-section">
       <div className="container">
         <div className="row">
           <div className="col-xs-12">
             <div className="subscribe-head">
-              <h2>Interested in custom work or more?</h2>
-              <p>Sign up for free and stay in touch</p>
+              <h2>Interested in custom work or have questions?</h2>
+              <p>Reach out for free and stay in touch!</p>
               <form className="form-section" action="https://formspree.io/f/xzbojaod" method="POST">
                 <input type="name" placeholder="Name" name="name" required />
                 <br />

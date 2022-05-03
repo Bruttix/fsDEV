@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 .rowCarousel{
-    padding-top: 0.80%;
+    padding: 0;
 }
 .containerCarousel {
     display: flex;
@@ -113,7 +113,6 @@ body {
 /*Carousel end*/
 
 body {
-    display: grid;
     place-items: center;
     font-family: "Metal Mania", cursive;
     color: var(--clr-neon);
@@ -255,14 +254,78 @@ select.flex-box{
 
     END
 */
+/* mobile search buttons */
+.neon-button6 {
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    background-color: #64094980;
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 0.5em;
+    border-radius: .5em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    margin-right: .5em;
+    position: center;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+    .neon-button6::before {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        background: var(--clr-neon);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(3em);
+        opacity: 0.4;
+    }
+
+    .neon-button6::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0 2em 0.5em var(--clr-neon);
+        opacity: 0;
+        background-color: transparent;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .neon-button6:hover,
+    .neon-button6:focus {
+        color: #77fcfe;
+        text-shadow: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .neon-button6:hover::before,
+        .neon-button6:focus::before {
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .neon-button6:hover::after,
+        .neon-button6:focus::after {
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+        }
+/* end mobile search buttons*/
 .container .img_product {
     transform-origin: center;
     max-width: 510px;
     transform: perspective(800px) rotateY(25deg);
     transition: 0.3s;
 }
-.container:hover img, {
-    opacity: 0.6;
+.container:hover img{
+    opacity: 0.8;
 }
 
 .container img:hover{
@@ -318,7 +381,7 @@ textarea:focus {
 }
 .Announcement {
     background: url('https://res.cloudinary.com/dqbkfteqj/image/upload/c_scale,h_586,q_100,w_2099/v1646562640/bricks_bwz7xr.png');
-    padding: 20px 40px 20px 40px;
+    
     border-radius: 130px;
     margin-top: 10px;
     background-repeat: no-repeat;
@@ -535,22 +598,6 @@ textarea:focus {
     left: 0;
     z-index: 99;
     box-shadow: 2px 2px 5px hsl(317 100% 54%);
-    nav {
-    float: right;
-    padding-right: 35px;
-    line-height: $lh;
-    ul li {
-      list-style: none;
-      display: inline-block;
-      margin-left: 25px;
-      a {
-        text-decoration: none;
-        &:hover {
-          color: var(--clr-neon);
-        }
-      }
-    }
-  }
 }
 .navbar-brand img {
   width: 60%;
@@ -737,9 +784,11 @@ a.headerSocial:hover::after {
        margin-left: 300px; 
     }
   }
+
 .headerlogo {
-    margin-left: -8rem;
+    margin-left: -8.5rem;
     margin-top: 5px;
+    backdrop-filter: blur(5px);
 }
 
 #navbar ul {
@@ -1075,8 +1124,6 @@ a.headerSocial:hover::after {
 .subscribe-section {
     background-image: url("https://res.cloudinary.com/dqbkfteqj/image/upload/v1646562640/bricks_bwz7xr.png");
     padding: 100px 100px;
-    background-position: 0% 0%;
-    background-size: 100% 100%;
     border-radius: 175px;
     width: 100%;
 }

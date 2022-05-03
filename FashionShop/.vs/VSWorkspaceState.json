@@ -5,11 +5,7 @@
     "\\client frontend\\src",
     "\\client frontend\\src\\components",
     "\\client frontend\\src\\components\\homeComponents",
-    "\\dashboard",
-    "\\dashboard\\src",
-    "\\dashboard\\src\\components",
-    "\\dashboard\\src\\components\\products",
-    "\\dashboard\\src\\screens"
+    "\\client frontend\\src\\screens"
   ],
   "SelectedNode": "\\client frontend\\src\\components\\homeComponents\\ShopGirlsSection.js",
   "PreviewInSolutionExplorer": false

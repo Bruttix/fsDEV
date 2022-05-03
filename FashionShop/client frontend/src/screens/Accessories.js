@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./../components/Header";
-import ShopSection from "./../components/homeComponents/ShopSection";
+import ShopAccessSection from "./../components/homeComponents/ShopAccessSection";
 import ContactInfo from "./../components/homeComponents/ContactInfo";
 import CalltoActionSection from "./../components/homeComponents/CalltoActionSection";
 import Footer from "./../components/Footer";
@@ -12,7 +12,7 @@ const Accessories = ({ match }) => {
     return (
         <div>
             <Header />
-            <ShopSection keyword={keyword} pagenumber={pagenumber} />
+            <ShopAccessSection keyword={keyword} pagenumber={pagenumber} />
             <CalltoActionSection />
             <ContactInfo />
             <Footer />

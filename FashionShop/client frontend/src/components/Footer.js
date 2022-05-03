@@ -5,43 +5,43 @@ const Footer = () => {
     <div className="footer">
       
       <div>
-      <section class="carousel_bottom" aria-label="Gallery">
-        <ol class="carousel_bottom__viewport">
+      <section className="carousel_bottom" aria-label="Gallery">
+        <ol className="carousel_bottom__viewport">
           <li id="carousel_bottom__slide1"
-            tabindex="0"
-            class="carousel_bottom__slide">
-            <div class="carousel_bottom__snapper"
+            tabIndex="0"
+            className="carousel_bottom__slide">
+            <div className="carousel_bottom__snapper"
             >
 
             </div>
           </li>
           <li id="carousel_bottom__slide2"
-            tabindex="0"
-            class="carousel_bottom__slide">
-            <div class="carousel_bottom__snapper"></div>
+            tabIndex="0"
+            className="carousel_bottom__slide">
+            <div className="carousel_bottom__snapper"></div>
             <a href="#carousel_bottom__slide1"
-              class="carousel_bottom__prev"> </a>
+              className="carousel_bottom__prev"> </a>
             <a href="#carousel_bottom__slide3"
-              class="carousel_bottom__next"> </a>
+              className="carousel_bottom__next"> </a>
           </li>
           <li id="carousel_bottom__slide3"
-            tabindex="0"
-            class="carousel_bottom__slide"
+            tabIndex="0"
+            className="carousel_bottom__slide"
           >
-            <div class="carousel_bottom__snapper"></div>
+            <div className="carousel_bottom__snapper"></div>
             <a href="#carousel_bottom__slide2"
-              class="carousel_bottom__prev"> </a>
+              className="carousel_bottom__prev"> </a>
             <a href="#carousel_bottom__slide4"
-              class="carousel_bottom__next"> </a>
+              className="carousel_bottom__next"> </a>
           </li>
           <li id="carousel_bottom__slide4"
-            tabindex="0"
-            class="carousel_bottom__slide">
-            <div class="carousel_bottom__snapper"></div>
+            tabIndex="0"
+            className="carousel_bottom__slide">
+            <div className="carousel_bottom__snapper"></div>
             <a href="#carousel_bottom__slide3"
-              class="carousel_bottom__prev"> </a>
+              className="carousel_bottom__prev"> </a>
             <a href="#carousel_bottom__slide1"
-              class="carousel_bottom__next"></a>
+              className="carousel_bottom__next"></a>
           </li>
         </ol>
       </section>

@@ -99,7 +99,7 @@ const PlaceOrderScreen = ({ history }) => {
             <div className="row ">
               <div className="col-md-4 center">
                 <div className="alert-success order-box">
-                  <i class="fas fa-user"></i>
+                  <i className="fas fa-user"></i>
                 </div>
               </div>
               <div className="col-md-8 center">
@@ -190,7 +190,7 @@ const PlaceOrderScreen = ({ history }) => {
                    <input type="checkbox" style={{ display: 'none' }} id="cb1"/>
                     <div id="divMenu1">
                       Coupon Code: <input type="text" id="couponCode"/>
-                      <button class="neon-button2" type="submit" onClick={couponCodeHandler}>
+                      <button className="neon-button2" type="submit" onClick={couponCodeHandler}>
                          Submit Coupon
                       </button>
                     </div>
@@ -232,7 +232,7 @@ const PlaceOrderScreen = ({ history }) => {
               </tbody>
             </table>
             {cart.cartItems.length === 0 ? null : (
-              <button class="neon-button" type="submit" onClick={placeOrderHandler}>
+              <button className="neon-button" type="submit" onClick={placeOrderHandler}>
                 PLACE ORDER
               </button>
             )}

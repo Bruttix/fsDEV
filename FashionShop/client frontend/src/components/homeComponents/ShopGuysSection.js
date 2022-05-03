@@ -7,14 +7,14 @@ import { listProduct } from "../../Redux/Actions/ProductActions";
 import Loading from "../LoadingError/Loading";
 import Message from "../LoadingError/Error";
 
-const ShopGirlsSection = (props) => {
+const ShopGuysSection = (props) => {
   const { keyword, pagenumber } = props;
   const dispatch = useDispatch();
 
   const productList = useSelector((state) => state.productList);
   const { loading, error, products, page, pages } = productList;
   function filterer(product) {
-      return product => product.category === 'Girls';
+      return product => product.category === 'Guys';
   };
   useEffect(() => {
     dispatch(listProduct(keyword, pagenumber));
@@ -46,7 +46,7 @@ const ShopGirlsSection = (props) => {
                           <div className="shoptext">
                             <p>
                               <Link to={`/products/${product._id}`}>
-                                {product.name}
+                                {product.name} 
                               </Link>
                             </p>
 
@@ -77,4 +77,4 @@ const ShopGirlsSection = (props) => {
   );
 };
 
-export default ShopGirlsSection;
+export default ShopGuysSection;

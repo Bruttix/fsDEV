@@ -35,12 +35,12 @@ const Header = () => {
           <div className="mobile-header">
             <div className="container ">
               <div className="row ">
-                <div className="col-6 d-flex align-items-center">
+                <div className="col-0 d-flex align-items-center">
                   <Link className="navbar-brand" to="/">
                     <img alt="logo" src="/images/headerlogosmall.png" />
                   </Link>
                 </div>
-                <div className="col-6 d-flex align-items-center justify-content-end Login-Register">
+                <div className="col-0 d-flex align-items-start Login-Register">
                   {userInfo ? (
                     <div className="btn-group">
                       <button type="button" className="name-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -57,9 +57,10 @@ const Header = () => {
                       </div>
                     </div>
                   ) : (
+
                     <div className="btn-group">
                       <button type="button" className="name-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user"></i>
+                        <i className="fas fa-user"></i>
                       </button>
                       <div className="dropdown-menu">
                         <Link className="dropdown-item" to="/login">
@@ -70,6 +71,34 @@ const Header = () => {
                           Register
                         </Link>
                       </div>
+                  <div className="d-flex align-items-center">
+                       <a className="headerSocial" href="https://facebook.com" target="_blank" rel="noreferrer">
+                         <i className="headerSocial fab fa-facebook"></i>
+                       </a>
+                       <a className="headerSocial" href="https://instagram.com" target ="_blank" rel="noreferrer">
+                         <i className="headerSocial fab fa-instagram"></i>
+                       </a>
+                       <a className="headerSocial" href="https://twitter.com" target="_blank" rel="noreferrer">
+                         <i className="headerSocial fab fa-twitter"></i>
+                       </a>
+                       <a className="headerSocial" href="http://linkedin.com" target="_blank" rel="noreferrer">
+                         <i className="headerSocial fab fa-linkedin"></i>
+                       </a>
+                       <a className="headerSocial" href="https://github.com/Bruttix/fsDEV" target ="_blank" rel="noreferrer">
+                         <i className="headerSocial fab fa-github"></i>
+                       </a>
+                    <form onSubmit={submitHandler} className="input-group">
+                      <input
+                        type="search"
+                        className="neon-button3"
+                        placeholder="Product Search "
+                        onChange={(e) => setKeyword(e.target.value)}
+                      />
+                      <button type="submit" className="neon-button3">
+                        search
+                      </button>
+                    </form>
+                  </div>
                     </div>
                   )}
 
@@ -78,14 +107,8 @@ const Header = () => {
                     <span className="badge">{cartItems.length}</span>
                   </Link>
                 </div>
-                <div className="col-12 d-flex align-items-center">
-                  <form onSubmit={submitHandler} className="input-group">
-                    <input type="search" className="form-control rounded search" placeholder="Search" onChange={(e) => setKeyword(e.target.value)} />
-                    <button type="submit" className="neon-button3">
-                      search
-                    </button>
-                  </form>
-                </div>
+                 
+                
               </div>
             </div>
           </div>
@@ -101,19 +124,19 @@ const Header = () => {
                 
               <div className="col-md-6 col-8 d-flex align-items-center">
                    <a className="headerSocial" href="https://facebook.com" target="_blank" rel="noreferrer">
-                     <i class="headerSocial fab fa-facebook"></i>
+                     <i className="headerSocial fab fa-facebook"></i>
                    </a>
                    <a className="headerSocial" href="https://instagram.com" target ="_blank" rel="noreferrer">
-                     <i class="headerSocial fab fa-instagram"></i>
+                     <i className="headerSocial fab fa-instagram"></i>
                    </a>
                    <a className="headerSocial" href="https://twitter.com" target="_blank" rel="noreferrer">
-                     <i class="headerSocial fab fa-twitter"></i>
+                     <i className="headerSocial fab fa-twitter"></i>
                    </a>
                    <a className="headerSocial" href="http://linkedin.com" target="_blank" rel="noreferrer">
                      <i className="headerSocial fab fa-linkedin"></i>
                    </a>
                    <a className="headerSocial" href="https://github.com/Bruttix/fsDEV" target ="_blank" rel="noreferrer">
-                     <i class="headerSocial fab fa-github"></i>
+                     <i className="headerSocial fab fa-github"></i>
                    </a>
                 <form onSubmit={submitHandler} className="input-group">
                   <input
@@ -128,12 +151,12 @@ const Header = () => {
                 </form>
               </div>
               <nav id="navbar" className="col-md-6 col-8 d-flex align-items-center">
-                <div class="nav-wrapper">
+                <div className="nav-wrapper">
                   <ul id="menu">
                     <li><a href="/Custom">Custom</a></li>
                     <div className="dropdown">
                        <li><a className="dropbtn" href="/GirlsScreen">Girls</a></li>
-                          <div class="dropdown-content">
+                          <div className="dropdown-content">
                             <a href="/GirlsScreen">Shirts</a>
                             <a href="/GirlsScreen">Shorts</a>
                             <a href="/GirlsScreen">Trousers</a>
@@ -144,7 +167,7 @@ const Header = () => {
                     </div>
                     <div className="dropdown2">
                        <li><a className="dropbtn2" href="/GuysScreen">Guys</a></li>
-                          <div class="dropdown-content2">
+                          <div className="dropdown-content2">
                             <a href="/GuysScreen">Shirts</a>
                             <a href="/GuysScreen">Shorts</a>
                             <a href="/GuysScreen">Trousers</a>
@@ -155,7 +178,7 @@ const Header = () => {
                     </div>
                     <div className="dropdown3">
                        <li><a className="dropbtn3" href="/Accessories">Accessories</a></li>
-                          <div class="dropdown-content3">
+                          <div className="dropdown-content3">
                             <a href="/Accessories">Bags</a>
                             <a href="/Accessories">Jewelry</a>
                             <a href="/Accessories">Backpacks</a>
@@ -194,8 +217,8 @@ const Header = () => {
                   </div>
                 ) : (
                   <>
-                    <Link class="neon-button2"to="/register">Register</Link>
-                    <Link class="neon-button2"to="/login">Login</Link>
+                    <Link className="neon-button2"to="/register">Register</Link>
+                    <Link className="neon-button2"to="/login">Login</Link>
                   </>
                 )}
                     
